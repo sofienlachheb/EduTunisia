@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="مشاهدة درس EduTunisia AI مع فيديو متقدم، أهداف تعلم، محتوى غني، ملاحظات، تمارين، واجبات، نقاش وأستاذ ذكي." />
+  <title>مشاهدة الدرس | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="student-lesson.css" />
+</head>
+<body data-protected-role="student,teacher">
+  <div class="lesson-shell">
+    <header class="topbar glass">
+      <a class="brand" href="/student/dashboard/" data-route="/student/dashboard" aria-label="EduTunisia AI">
+        <span class="brand-mark">AI</span>
+        <span>EduTunisia <strong>AI</strong></span>
+      </a>
+
+      <div class="lesson-title">
+        <p>رياضيات بكالوريا · الاشتقاق</p>
+        <h1>مفهوم المشتقة وتفسيرها الهندسي</h1>
+      </div>
+
+      <div class="top-actions">
+        <button class="soft-button" type="button" data-mark-complete data-go="/student/lessons/lesson-1">الدرس التالي</button>
+        <button class="menu-button" type="button" data-mobile-panel aria-label="فتح أدوات الدرس">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="profile">أ</div>
+      </div>
+    </header>
+
+    <main class="learning-grid">
+      <aside class="navigator glass" data-mobile-drawer aria-label="متصفح الدروس">
+        <div class="panel-head">
+          <div>
+            <span>Lessons Navigator</span>
+            <h2>مسار الوحدة</h2>
+          </div>
+          <b>4/12</b>
+        </div>
+        <div class="course-progress">
+          <div><span style="width: 42%"></span></div>
+          <strong>42% من الوحدة مكتمل</strong>
+        </div>
+        <nav class="lesson-nav">
+          <a class="done" href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><i>✓</i><span>مدخل إلى الاشتقاق</span></a>
+          <a class="done" href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><i>✓</i><span>مفهوم معدل التغير</span></a>
+          <a class="active" href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><i>▶</i><span>المشتقة هندسيا</span></a>
+          <a href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><i>04</i><span>قواعد الاشتقاق</span></a>
+          <a href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><i>05</i><span>تطبيقات في الدوال</span></a>
+          <a href="/student/exams/" data-route="/student/exams"><i>06</i><span>اختبار قصير</span></a>
+        </nav>
+        <div class="navigator-summary">
+          <strong>الدرس التالي</strong>
+          <p>قواعد الاشتقاق الأساسية مع أمثلة بكالوريا قصيرة.</p>
+        </div>
+      </aside>
+
+      <section class="lesson-main">
+        <section class="video-card glass">
+          <div class="video-player" data-video-player>
+            <img src="assets/edutunisia-dashboard-illustration.png" alt="طالب يتعلم مع أستاذ ذكي وتحليلات درس" />
+            <div class="video-shade"></div>
+            <button class="play-button" type="button" data-play aria-label="تشغيل الفيديو">▶</button>
+            <div class="video-meta">
+              <span>فيديو تفاعلي · جودة HD</span>
+              <strong>12:04</strong>
+            </div>
+            <div class="player-controls">
+              <button type="button" data-skip="-10">-10</button>
+              <div class="timeline"><span data-timeline style="width: 38%"></span></div>
+              <button type="button" data-skip="10">+10</button>
+              <button type="button" data-speed>1.25x</button>
+              <button type="button" data-caption>CC</button>
+              <button type="button" data-fullscreen>⛶</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="objective-card glass">
+          <div class="panel-head">
+            <div>
+              <span>Learning Objectives</span>
+              <h2>ماذا ستتعلم؟</h2>
+            </div>
+            <b>3 أهداف</b>
+          </div>
+          <div class="objectives-grid">
+            <label><input type="checkbox" checked /> فهم المشتقة كسرعة تغير لحظية.</label>
+            <label><input type="checkbox" checked /> تفسير المشتقة كمعدل ميل المماس.</label>
+            <label><input type="checkbox" /> حل مثال بكالوريا باستعمال التعريف.</label>
+          </div>
+        </section>
+
+        <article class="content-card glass">
+          <span class="section-kicker">Rich Lesson Content</span>
+          <h2>شرح الدرس</h2>
+          <p>عندما ندرس دالة، لا يكفي أن نعرف قيمتها فقط. نحتاج أحيانا إلى معرفة سرعة تغيرها قرب نقطة معينة. هنا تظهر المشتقة: أداة رياضية تخبرنا كيف تتغير الدالة في لحظة محددة.</p>
+          <h3>التفسير الهندسي</h3>
+          <p>بيانيا، قيمة المشتقة عند نقطة تمثل ميل المماس للمنحنى في تلك النقطة. إذا كان الميل موجبا فالدالة تتزايد، وإذا كان سالبا فهي تتناقص، وإذا كان صفرا فقد نكون أمام نقطة حرجة.</p>
+          <div class="formula-box">
+            <span>f'(a) = lim</span>
+            <small>h → 0</small>
+            <span>[f(a+h)-f(a)] / h</span>
+          </div>
+          <p>لا تحفظ الصيغة وحدها. اربطها بالفكرة: نقيس تغيرا صغيرا جدا في الدالة حول النقطة، ثم نراقب ما يحدث عندما يصبح هذا التغير قريبا من الصفر.</p>
+          <div class="concept-grid">
+            <div><strong>معدل التغير</strong><span>بين نقطتين على المنحنى</span></div>
+            <div><strong>المشتقة</strong><span>معدل تغير لحظي عند نقطة</span></div>
+            <div><strong>المماس</strong><span>خط يلامس المنحنى محليا</span></div>
+          </div>
+        </article>
+
+        <section class="resources-notes-grid">
+          <article class="resources-card glass">
+            <div class="panel-head">
+              <div>
+                <span>Downloadable Resources</span>
+                <h2>ملفات قابلة للتحميل</h2>
+              </div>
+            </div>
+            <div class="resource-list">
+              <a href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><b>PDF</b><div><strong>ملخص المشتقة</strong><small>1.8MB · 8 صفحات</small></div></a>
+              <a href="/student/exercises/exercise-1/" data-route="/student/exercises/exercise-1"><b>EX</b><div><strong>تمارين تطبيقية</strong><small>12 تمرينا مع حلول</small></div></a>
+              <a href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1"><b>MP3</b><div><strong>شرح صوتي مختصر</strong><small>03:20 للاستماع السريع</small></div></a>
+            </div>
+          </article>
+
+          <article class="notes-card glass">
+            <div class="panel-head">
+              <div>
+                <span>Personal Notes</span>
+                <h2>ملاحظاتي</h2>
+              </div>
+              <button class="soft-button" type="button" data-save-note>حفظ</button>
+            </div>
+            <textarea data-notes placeholder="اكتب ملاحظاتك هنا...">المشتقة = ميل المماس. أراجع الفرق بين معدل التغير والمشتقة.</textarea>
+            <div class="saved-notes" data-saved-notes>
+              <span>00:42 · تعريف المشتقة</span>
+              <span>08:20 · مثال بياني مهم</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="practice-grid">
+          <article class="exercise-card glass">
+            <div class="panel-head">
+              <div>
+                <span>Exercises</span>
+                <h2>تمارين فورية</h2>
+              </div>
+              <b>3 أسئلة</b>
+            </div>
+            <div class="question" data-question>
+              <strong>إذا كان f(x)=x²، فما قيمة f'(3)؟</strong>
+              <button type="button" data-answer="wrong">3</button>
+              <button type="button" data-answer="correct">6</button>
+              <button type="button" data-answer="wrong">9</button>
+              <p data-answer-feedback></p>
+            </div>
+          </article>
+
+          <article class="homework-card glass">
+            <div class="panel-head">
+              <div>
+                <span>Homework</span>
+                <h2>واجب الدرس</h2>
+              </div>
+              <b>موعده غدا</b>
+            </div>
+            <p>حل 6 تمارين حول تفسير المشتقة بيانيا ورفع الإجابات قبل الساعة 20:00.</p>
+            <div class="homework-progress"><span style="width: 45%"></span></div>
+            <button class="primary-button" type="button" data-homework data-go="/student/exercises/exercise-1">ابدأ التمرين</button>
+          </article>
+        </section>
+
+        <section class="discussion-card glass">
+          <div class="panel-head">
+            <div>
+              <span>Discussion</span>
+              <h2>نقاش الدرس</h2>
+            </div>
+            <b>12 مشاركة</b>
+          </div>
+          <div class="discussion-list" data-discussion-list>
+            <article><span>س</span><div><strong>سارة</strong><p>هل المشتقة دائما تعني السرعة؟</p></div></article>
+            <article><span>م</span><div><strong>الأستاذة مريم</strong><p>هي سرعة تغير في السياق الرياضي، وقد تمثل السرعة الفيزيائية عندما تكون الدالة مسافة حسب الزمن.</p></div></article>
+          </div>
+          <form class="comment-box" data-comment-form>
+            <input type="text" placeholder="اكتب سؤالا أو تعليقا..." aria-label="تعليق جديد" />
+            <button type="submit">إرسال</button>
+          </form>
+        </section>
+      </section>
+
+      <aside class="ai-sidebar glass" aria-label="الأستاذ الذكي وتتبع التقدم">
+        <section class="progress-widget">
+          <div class="panel-head">
+            <div>
+              <span>Progress Tracking</span>
+              <h2>تقدم الدرس</h2>
+            </div>
+          </div>
+          <div class="progress-ring" style="--p: 64%"><strong>64%</strong><span>مكتمل</span></div>
+          <div class="progress-stats">
+            <div><strong>18 دقيقة</strong><span>وقت التعلم</span></div>
+            <div><strong>2/3</strong><span>أهداف مكتملة</span></div>
+          </div>
+        </section>
+
+        <section class="ai-tutor">
+          <div class="panel-head">
+            <div>
+              <span>AI Tutor</span>
+              <h2>اسأل الأستاذ الذكي</h2>
+            </div>
+            <b class="live">مباشر</b>
+          </div>
+          <div class="ai-chat" data-ai-chat>
+            <p class="ai-message">أستطيع تبسيط المشتقة، توليد تمرين مشابه، أو مراجعة إجابتك خطوة بخطوة.</p>
+            <p class="user-message">اشرح لي معنى المماس بسرعة.</p>
+            <p class="ai-message">المماس خط يلامس المنحنى قرب نقطة واحدة، وميله يساوي قيمة المشتقة في تلك النقطة.</p>
+          </div>
+          <form class="ai-form" data-ai-form>
+            <input type="text" placeholder="اكتب سؤالك..." aria-label="سؤال للأستاذ الذكي" />
+            <button type="submit">إرسال</button>
+          </form>
+        </section>
+
+        <section class="smart-actions">
+          <button type="button" data-go="/student/ai-tutor?lessonId=lesson-1">اسأل الذكاء الاصطناعي</button>
+          <button type="button" data-go="/student/exercises/exercise-1">ولد اختبارا قصيرا</button>
+          <button type="button" data-go="/student/ai-tutor?lessonId=lesson-1">اشرح بطريقة أبسط</button>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="mobile-backdrop" data-backdrop></div>
+  <div class="toast" data-toast role="status" aria-live="polite">تم تنفيذ الإجراء</div>
+  <script src="student-lesson.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="لوحة الطالب في EduTunisia AI لمتابعة الدورات، التقدم، الامتحانات، الأستاذ الذكي، الإنجازات والشهادات." />
+  <title>لوحة الطالب | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body data-protected-role="student">
+  <div class="student-shell" data-shell>
+    <aside class="sidebar glass" data-sidebar aria-label="القائمة الجانبية">
+      <div class="sidebar-head">
+        <a class="brand" href="/" data-route="/" aria-label="EduTunisia AI">
+          <span class="brand-mark">AI</span>
+          <span class="brand-name">EduTunisia <strong>AI</strong></span>
+        </a>
+        <button class="icon-button collapse-button" type="button" data-collapse aria-label="طي القائمة">
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="side-nav" aria-label="تنقل لوحة الطالب">
+        <a class="active" href="/student/dashboard/" data-route="/student/dashboard"><i>01</i><span>نظرة عامة</span></a>
+        <a href="/student/subjects/" data-route="/student/subjects"><i>02</i><span>المواد</span></a>
+        <a href="/student/courses/" data-route="/student/courses"><i>03</i><span>المقررات</span></a>
+        <a href="/student/lessons/" data-route="/student/lessons"><i>04</i><span>الدروس</span></a>
+        <a href="/student/exercises/" data-route="/student/exercises"><i>05</i><span>التمارين</span></a>
+        <a href="/student/exams/" data-route="/student/exams"><i>06</i><span>الاختبارات</span></a>
+        <a href="/student/ai-tutor/" data-route="/student/ai-tutor"><i>07</i><span>AI Tutor</span></a>
+        <a href="/student/certificates/" data-route="/student/certificates"><i>08</i><span>الشهادات</span></a>
+        <a href="/student/settings/" data-route="/student/settings"><i>09</i><span>الإعدادات</span></a>
+      </nav>
+
+      <div class="weekly-goal">
+        <span>هدف الأسبوع</span>
+        <strong>8 ساعات مراجعة</strong>
+        <div class="progress-line"><b style="width: 68%"></b></div>
+        <small>5.4 ساعات مكتملة</small>
+      </div>
+    </aside>
+
+    <div class="mobile-backdrop" data-backdrop></div>
+
+    <main class="main-area">
+      <header class="topbar glass">
+        <div class="topbar-start">
+          <button class="icon-button menu-button" type="button" data-menu aria-label="فتح القائمة">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <p>لوحة الطالب</p>
+            <h1>مرحبا أحمد، لنرفع جاهزيتك للامتحان خطوة ذكية اليوم.</h1>
+          </div>
+        </div>
+
+        <form class="search-box" role="search">
+          <input type="search" placeholder="ابحث عن درس، تمرين أو شهادة" aria-label="بحث" />
+          <button type="submit" aria-label="بحث">بحث</button>
+        </form>
+
+        <div class="top-actions">
+          <button class="notification-button" type="button" data-notifications aria-label="الإشعارات">
+            <span></span>
+            <strong>3</strong>
+          </button>
+          <div class="profile-pill">
+            <span>أ</span>
+            <div>
+              <strong>أحمد بن سالم</strong>
+              <small>بكالوريا علوم تجريبية</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="notification-drawer glass" data-notification-drawer aria-label="الإشعارات">
+        <div class="drawer-head">
+          <strong>إشعارات جديدة</strong>
+          <button type="button" data-close-notifications aria-label="إغلاق">×</button>
+        </div>
+        <ul>
+          <li><span></span>اختبار رياضيات قصير بعد يومين مع خطة مراجعة جاهزة.</li>
+          <li><span></span>حصلت على شارة المثابرة بعد 12 يوما متتاليا.</li>
+          <li><span></span>الأستاذ الذكي وجد 3 فجوات في درس الاشتقاق.</li>
+        </ul>
+      </section>
+
+      <section class="welcome-card glass" id="overview">
+        <div class="welcome-copy">
+          <span class="eyebrow">خطة تعلم شخصية</span>
+          <h2>أنت متقدم بـ 14% عن نسق الأسبوع الماضي.</h2>
+          <p>درس اليوم المقترح هو الاشتقاق وتطبيقاته، وبعده اختبار قصير يحدد جاهزيتك للفروض القادمة ويقترح تمارين مخصصة.</p>
+          <div class="welcome-actions">
+            <a class="primary-button" href="/student/lessons/lesson-1/" data-route="/student/lessons/lesson-1">ابدأ درس اليوم</a>
+            <a class="secondary-button" href="/student/ai-tutor/?lessonId=lesson-1" data-route="/student/ai-tutor?lessonId=lesson-1">اسأل الأستاذ الذكي</a>
+          </div>
+        </div>
+        <div class="welcome-visual">
+          <img src="assets/edutunisia-dashboard-illustration.png" alt="طالب يتعلم مع أستاذ ذكي وتحليلات تعليمية" />
+          <div class="xp-chip"><strong>2,840 XP</strong><span>مستوى ممتاز</span></div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel glass progress-panel" id="progress">
+          <div class="section-head">
+            <div>
+              <span>Learning Analytics</span>
+              <h3>تحليلات تقدم التعلم</h3>
+            </div>
+            <button class="ghost-button" type="button" data-filter="week">هذا الأسبوع</button>
+          </div>
+          <div class="progress-metrics">
+            <div><span>المعدل العام</span><strong>84%</strong><small>+9% من آخر اختبار</small></div>
+            <div><span>سلسلة التعلم</span><strong>12</strong><small>يوما متتاليا</small></div>
+            <div><span>تمارين مكتملة</span><strong>148</strong><small>من 180 هذا الشهر</small></div>
+          </div>
+          <div class="learning-chart" aria-label="رسم بياني لتقدم الطالب">
+            <svg viewBox="0 0 720 250" role="img">
+              <defs>
+                <linearGradient id="studentLine" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#06b6d4" />
+                  <stop offset=".55" stop-color="#2563eb" />
+                  <stop offset="1" stop-color="#7c3aed" />
+                </linearGradient>
+                <linearGradient id="studentArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#7c3aed" stop-opacity=".28" />
+                  <stop offset="1" stop-color="#06b6d4" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="grid-line" d="M38 48H690M38 104H690M38 160H690M38 216H690" />
+              <path class="area-line" d="M42 192 C118 160 154 174 218 132 C288 86 330 118 392 92 C478 58 520 76 590 48 C642 28 670 44 690 38 L690 230 L42 230 Z" />
+              <path class="main-line" d="M42 192 C118 160 154 174 218 132 C288 86 330 118 392 92 C478 58 520 76 590 48 C642 28 670 44 690 38" />
+              <g class="points">
+                <circle cx="42" cy="192" r="6" />
+                <circle cx="218" cy="132" r="6" />
+                <circle cx="392" cy="92" r="6" />
+                <circle cx="590" cy="48" r="6" />
+                <circle cx="690" cy="38" r="6" />
+              </g>
+            </svg>
+          </div>
+        </article>
+
+        <article class="panel glass tutor-panel" id="tutor">
+          <div class="section-head">
+            <div>
+              <span>AI Tutor</span>
+              <h3>الأستاذ الذكي</h3>
+            </div>
+            <b class="live-badge">مباشر</b>
+          </div>
+          <div class="chat-stream" data-chat-stream>
+            <p class="ai-bubble">لاحظت أنك تتردد في تمارين النهايات. هل تريد خطة مراجعة من 15 دقيقة؟</p>
+            <p class="student-bubble">نعم، أريد شرحا سريعًا مع مثال.</p>
+            <p class="ai-bubble">ابدأ بقاعدة التحليل، ثم عوض بعد التبسيط. سأرسل لك تمرينا مشابها.</p>
+          </div>
+          <form class="tutor-form" data-tutor-form>
+            <input type="text" placeholder="اكتب سؤالك للأستاذ الذكي" aria-label="سؤال للأستاذ الذكي" />
+            <button type="submit">إرسال</button>
+          </form>
+        </article>
+
+        <article class="panel glass courses-panel" id="courses">
+          <div class="section-head">
+            <div>
+              <span>Courses</span>
+              <h3>الدورات المسجلة</h3>
+            </div>
+            <a class="text-link" href="/student/courses/" data-route="/student/courses">عرض الكل</a>
+          </div>
+          <div class="course-list">
+            <article class="course-item">
+              <div class="course-icon blue">ر</div>
+              <div>
+                <h4>رياضيات بكالوريا: الاشتقاق</h4>
+                <p>12 درس، 36 تمرين، اختبار نهائي</p>
+                <div class="progress-line"><b style="width: 74%"></b></div>
+              </div>
+              <strong>74%</strong>
+            </article>
+            <article class="course-item">
+              <div class="course-icon purple">ف</div>
+              <div>
+                <h4>فيزياء: الكهرباء والمغناطيسية</h4>
+                <p>9 دروس، 24 تمرين</p>
+                <div class="progress-line"><b style="width: 52%"></b></div>
+              </div>
+              <strong>52%</strong>
+            </article>
+            <article class="course-item">
+              <div class="course-icon cyan">ع</div>
+              <div>
+                <h4>العربية: تحليل النص</h4>
+                <p>7 دروس، 18 تطبيقا</p>
+                <div class="progress-line"><b style="width: 41%"></b></div>
+              </div>
+              <strong>41%</strong>
+            </article>
+          </div>
+        </article>
+
+        <article class="panel glass exams-panel" id="exams">
+          <div class="section-head">
+            <div>
+              <span>Exams</span>
+              <h3>امتحانات قادمة</h3>
+            </div>
+          </div>
+          <div class="exam-list">
+            <article>
+              <time datetime="2026-06-08">08 جوان</time>
+              <div><h4>فرض رياضيات</h4><p>الاشتقاق والنهايات</p></div>
+              <span>جاهزية 82%</span>
+            </article>
+            <article>
+              <time datetime="2026-06-12">12 جوان</time>
+              <div><h4>اختبار فيزياء</h4><p>دوائر كهربائية</p></div>
+              <span>جاهزية 64%</span>
+            </article>
+            <article>
+              <time datetime="2026-06-18">18 جوان</time>
+              <div><h4>محاكاة بكالوريا</h4><p>امتحان شامل بتوقيت رسمي</p></div>
+              <span>جاهزية 71%</span>
+            </article>
+          </div>
+        </article>
+
+        <article class="panel glass achievements-panel" id="achievements">
+          <div class="section-head">
+            <div>
+              <span>Achievements</span>
+              <h3>الشارات والإنجازات</h3>
+            </div>
+          </div>
+          <div class="badge-grid">
+            <div><b>12</b><span>أيام متتالية</span></div>
+            <div><b>84%</b><span>إتقان الرياضيات</span></div>
+            <div><b>148</b><span>تمارين محلولة</span></div>
+            <div><b>5</b><span>مراتب متقدمة</span></div>
+          </div>
+        </article>
+
+        <article class="panel glass certificates-panel" id="certificates">
+          <div class="section-head">
+            <div>
+              <span>Certificates</span>
+              <h3>الشهادات</h3>
+            </div>
+          </div>
+          <div class="certificate-list">
+            <div><strong>أساسيات الاشتقاق</strong><span>مكتملة، قابلة للتحميل</span><button type="button" data-certificate data-go="/student/exams">تحميل</button></div>
+            <div><strong>تحليل النص العربي</strong><span>85% مكتمل</span><button type="button" data-certificate data-go="/student/lessons/lesson-1">متابعة</button></div>
+          </div>
+        </article>
+
+        <article class="panel glass timeline-panel" id="timeline">
+          <div class="section-head">
+            <div>
+              <span>Activity</span>
+              <h3>خط النشاط</h3>
+            </div>
+          </div>
+          <div class="activity-list">
+            <article><span></span><div><strong>أنهيت درس تطبيقات الاشتقاق</strong><p>منذ 18 دقيقة</p></div></article>
+            <article><span></span><div><strong>حصلت على 92% في اختبار سريع</strong><p>منذ ساعة</p></div></article>
+            <article><span></span><div><strong>الأستاذ الذكي أنشأ خطة مراجعة</strong><p>اليوم 10:20</p></div></article>
+            <article><span></span><div><strong>تمت إضافة شهادة جديدة إلى ملفك</strong><p>أمس</p></div></article>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite">تم تنفيذ الإجراء</div>
+  <script src="dashboard.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إدارة الدورات في EduTunisia AI: بحث، فلاتر، عرض شبكي وجدولي، تحليلات، نشر وحذف الدورات.">
+  <title>إدارة الدورات | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="courses-management.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="page-shell">
+    <header class="page-header glass">
+      <div class="brand-block">
+        <a class="brand" href="/teacher/dashboard/" data-route="/teacher/dashboard" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">Course Management</p>
+          <h1>إدارة الدورات التعليمية</h1>
+          <p>نظم الدروس، راقب جاهزية النشر، وتابع أثر كل دورة على أداء التلاميذ من مساحة واحدة.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-open-publish>نشر دورة</button>
+        <button class="button primary" type="button" data-go="/teacher/courses/create">إنشاء مقرر جديد</button>
+      </div>
+    </header>
+
+    <section class="stats-grid" aria-label="إحصائيات الدورات">
+      <article class="stat-card glass">
+        <span>الدورات النشطة</span>
+        <strong>18</strong>
+        <small>+3 منذ الشهر الماضي</small>
+      </article>
+      <article class="stat-card glass">
+        <span>متوسط الإكمال</span>
+        <strong>72%</strong>
+        <small>تحسن 8%</small>
+      </article>
+      <article class="stat-card glass">
+        <span>دروس بانتظار النشر</span>
+        <strong>11</strong>
+        <small>4 جاهزة اليوم</small>
+      </article>
+      <article class="stat-card glass">
+        <span>تلاميذ مسجلون</span>
+        <strong>428</strong>
+        <small>على 6 مجموعات</small>
+      </article>
+    </section>
+
+    <main class="management-layout">
+      <section class="courses-panel glass">
+        <div class="toolbar">
+          <form class="search-box" role="search">
+            <input type="search" placeholder="ابحث باسم الدورة، المادة أو المستوى" aria-label="بحث في الدورات" data-search>
+            <button type="submit" aria-label="بحث">⌕</button>
+          </form>
+          <div class="filters" aria-label="فلاتر الدورات">
+            <select data-filter="status" aria-label="فلتر الحالة">
+              <option value="all">كل الحالات</option>
+              <option value="published">منشورة</option>
+              <option value="review">مراجعة</option>
+              <option value="draft">مسودة</option>
+            </select>
+            <select data-filter="level" aria-label="فلتر المستوى">
+              <option value="all">كل المستويات</option>
+              <option value="bac">بكالوريا</option>
+              <option value="secondary">ثانوي</option>
+              <option value="prep">إعدادي</option>
+            </select>
+          </div>
+          <div class="view-toggle" role="group" aria-label="اختيار العرض">
+            <button class="active" type="button" data-view="grid">شبكي</button>
+            <button type="button" data-view="table">جدولي</button>
+          </div>
+        </div>
+
+        <div class="courses-grid" data-course-grid>
+          <article class="course-card" data-title="رياضيات بكالوريا الاشتقاق" data-status="published" data-level="bac">
+            <div class="course-cover blue"><span>ر</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>بكالوريا</span><span class="status published">منشورة</span></div>
+              <h2>رياضيات بكالوريا: الاشتقاق</h2>
+              <p>18 درس · 42 تلميذا · آخر تحديث اليوم</p>
+              <div class="progress-line"><span style="width: 84%"></span></div>
+              <div class="course-footer"><strong>جاهزية 84%</strong><small>إكمال التلاميذ 76%</small></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-title="النهايات والاستمرارية" data-status="review" data-level="bac">
+            <div class="course-cover purple"><span>ن</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>بكالوريا</span><span class="status review">مراجعة</span></div>
+              <h2>النهايات والاستمرارية</h2>
+              <p>11 درس · 31 تلميذا · يحتاج إصلاحات</p>
+              <div class="progress-line"><span style="width: 67%"></span></div>
+              <div class="course-footer"><strong>جاهزية 67%</strong><small>إكمال التلاميذ 58%</small></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-title="إحصاء واحتمالات" data-status="draft" data-level="secondary">
+            <div class="course-cover cyan"><span>إ</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>ثانوي</span><span class="status draft">مسودة</span></div>
+              <h2>إحصاء واحتمالات</h2>
+              <p>7 دروس · 24 تلميذا · محتوى قيد البناء</p>
+              <div class="progress-line"><span style="width: 46%"></span></div>
+              <div class="course-footer"><strong>جاهزية 46%</strong><small>إكمال التلاميذ 32%</small></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-title="الجبر والمعادلات" data-status="published" data-level="prep">
+            <div class="course-cover green"><span>ج</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>إعدادي</span><span class="status published">منشورة</span></div>
+              <h2>الجبر والمعادلات</h2>
+              <p>14 درس · 68 تلميذا · واجب جديد</p>
+              <div class="progress-line"><span style="width: 91%"></span></div>
+              <div class="course-footer"><strong>جاهزية 91%</strong><small>إكمال التلاميذ 81%</small></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-title="هندسة الفضاء" data-status="review" data-level="secondary">
+            <div class="course-cover coral"><span>ه</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>ثانوي</span><span class="status review">مراجعة</span></div>
+              <h2>هندسة الفضاء</h2>
+              <p>9 دروس · 38 تلميذا · اختبار بانتظار النشر</p>
+              <div class="progress-line"><span style="width: 73%"></span></div>
+              <div class="course-footer"><strong>جاهزية 73%</strong><small>إكمال التلاميذ 69%</small></div>
+            </div>
+          </article>
+
+          <article class="course-card" data-title="تحليل الدوال" data-status="draft" data-level="bac">
+            <div class="course-cover amber"><span>د</span><button type="button" data-menu-button>⋯</button></div>
+            <div class="course-body">
+              <div class="course-meta"><span>بكالوريا</span><span class="status draft">مسودة</span></div>
+              <h2>تحليل الدوال</h2>
+              <p>5 دروس · 19 تلميذا · مسودة أولى</p>
+              <div class="progress-line"><span style="width: 38%"></span></div>
+              <div class="course-footer"><strong>جاهزية 38%</strong><small>إكمال التلاميذ 0%</small></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="courses-table" data-course-table hidden>
+          <table>
+            <thead>
+              <tr>
+                <th>الدورة</th>
+                <th>المستوى</th>
+                <th>الحالة</th>
+                <th>التلاميذ</th>
+                <th>الجاهزية</th>
+                <th>إجراء</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-title="رياضيات بكالوريا الاشتقاق" data-status="published" data-level="bac">
+                <td>رياضيات بكالوريا: الاشتقاق</td>
+                <td>بكالوريا</td>
+                <td><span class="status published">منشورة</span></td>
+                <td>42</td>
+                <td>84%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+              <tr data-title="النهايات والاستمرارية" data-status="review" data-level="bac">
+                <td>النهايات والاستمرارية</td>
+                <td>بكالوريا</td>
+                <td><span class="status review">مراجعة</span></td>
+                <td>31</td>
+                <td>67%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+              <tr data-title="إحصاء واحتمالات" data-status="draft" data-level="secondary">
+                <td>إحصاء واحتمالات</td>
+                <td>ثانوي</td>
+                <td><span class="status draft">مسودة</span></td>
+                <td>24</td>
+                <td>46%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+              <tr data-title="الجبر والمعادلات" data-status="published" data-level="prep">
+                <td>الجبر والمعادلات</td>
+                <td>إعدادي</td>
+                <td><span class="status published">منشورة</span></td>
+                <td>68</td>
+                <td>91%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+              <tr data-title="هندسة الفضاء" data-status="review" data-level="secondary">
+                <td>هندسة الفضاء</td>
+                <td>ثانوي</td>
+                <td><span class="status review">مراجعة</span></td>
+                <td>38</td>
+                <td>73%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+              <tr data-title="تحليل الدوال" data-status="draft" data-level="bac">
+                <td>تحليل الدوال</td>
+                <td>بكالوريا</td>
+                <td><span class="status draft">مسودة</span></td>
+                <td>19</td>
+                <td>38%</td>
+                <td><button type="button" data-menu-button>⋯</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="analytics-sidebar">
+        <section class="side-card glass">
+          <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="مدرس يدير محتوى تعليمي بمساعدة الذكاء الاصطناعي">
+          <h2>AI Course Insights</h2>
+          <p>أفضل فرصة إنتاج اليوم: إكمال دورة تحليل الدوال لأن 19 تلميذا ينتظرون محتوى التمارين.</p>
+          <button class="button primary" type="button" data-go="/teacher/ai-content-studio">فتح AI Studio</button>
+        </section>
+
+        <section class="side-card glass">
+          <div class="side-head">
+            <h2>تحليلات سريعة</h2>
+            <span>هذا الأسبوع</span>
+          </div>
+          <div class="donut"><strong>78%</strong><small>تفاعل عام</small></div>
+          <ul class="insight-list">
+            <li><span></span>أعلى دورة تفاعلا: الجبر والمعادلات</li>
+            <li><span></span>3 دورات تحتاج مراجعة قبل النشر</li>
+            <li><span></span>11 درسا يمكن تحسينه بأسئلة AI</li>
+          </ul>
+        </section>
+
+        <section class="side-card glass">
+          <div class="side-head">
+            <h2>قائمة إنتاج</h2>
+            <span>4 مهام</span>
+          </div>
+          <label class="task"><input type="checkbox" checked> مراجعة درس النهايات</label>
+          <label class="task"><input type="checkbox"> نشر اختبار الاشتقاق</label>
+          <label class="task"><input type="checkbox"> توليد واجب هندسة</label>
+          <label class="task"><input type="checkbox"> إرسال تقرير للأولياء</label>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="quick-menu glass" data-quick-menu>
+    <button type="button" data-go="/teacher/courses/course-1/edit">تعديل</button>
+    <button type="button" data-open-publish>نشر / تحديث</button>
+    <button type="button" data-go="/teacher/courses/course-1/lessons">إدارة الدروس</button>
+    <button type="button" data-go="/courses/course-1">عرض</button>
+    <button class="danger" type="button" data-open-delete>حذف الدورة</button>
+  </div>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+
+  <section class="modal glass" data-publish-modal role="dialog" aria-modal="true" aria-labelledby="publishTitle" hidden>
+    <div class="modal-head">
+      <h2 id="publishTitle">نشر الدورة</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>سيتم نشر الدورة للتلاميذ وربطها بالإشعارات وخطة المراجعة الأسبوعية.</p>
+    <label class="toggle-row"><input type="checkbox" checked> إرسال إشعار للتلاميذ</label>
+    <label class="toggle-row"><input type="checkbox" checked> تفعيل متابعة الأداء</label>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إلغاء</button>
+      <button class="button primary" type="button" data-confirm-publish>تأكيد النشر</button>
+    </div>
+  </section>
+
+  <section class="modal glass danger-modal" data-delete-modal role="dialog" aria-modal="true" aria-labelledby="deleteTitle" hidden>
+    <div class="modal-head">
+      <h2 id="deleteTitle">حذف الدورة؟</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>هذا الإجراء سيخفي الدورة من لوحة المدرس والتلاميذ. يمكنك الاحتفاظ بنسخة مؤرشفة قبل الحذف.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إلغاء</button>
+      <button class="button danger" type="button" data-confirm-delete>حذف الدورة</button>
+    </div>
+  </section>
+
+  <div class="toast" data-toast>تم تنفيذ الإجراء بنجاح</div>
+
+  <script src="courses-management.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

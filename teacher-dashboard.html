@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="لوحة المدرس في EduTunisia AI لإدارة الدورات، إنشاء المحتوى، متابعة التلاميذ، الامتحانات، والتحليلات التعليمية.">
+  <title>لوحة المدرس | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="teacher-dashboard.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="teacher-shell" data-shell>
+    <aside class="sidebar glass" data-sidebar aria-label="قائمة لوحة المدرس">
+      <div class="sidebar-head">
+        <a class="brand" href="/" data-route="/" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span class="brand-name">EduTunisia <strong>AI</strong></span>
+        </a>
+        <button class="icon-button desktop-only" type="button" data-collapse aria-label="طي القائمة">‹</button>
+      </div>
+
+      <nav class="side-nav" aria-label="تنقل لوحة المدرس">
+        <a class="active" href="/teacher/dashboard/" data-route="/teacher/dashboard"><span>01</span><strong>المكتب</strong></a>
+        <a href="/teacher/courses/" data-route="/teacher/courses"><span>02</span><strong>المقررات</strong></a>
+        <a href="/teacher/lessons/" data-route="/teacher/lessons"><span>03</span><strong>إدارة الدروس</strong></a>
+        <a href="/teacher/exercises/" data-route="/teacher/exercises"><span>04</span><strong>التمارين</strong></a>
+        <a href="/teacher/exams/" data-route="/teacher/exams"><span>05</span><strong>الاختبارات</strong></a>
+        <a href="/teacher/question-bank/" data-route="/teacher/question-bank"><span>06</span><strong>بنك الأسئلة</strong></a>
+        <a href="/teacher/ai-content-studio/" data-route="/teacher/ai-content-studio"><span>07</span><strong>AI Studio</strong></a>
+        <a href="/teacher/analytics/" data-route="/teacher/analytics"><span>08</span><strong>التحليلات</strong></a>
+      </nav>
+
+      <div class="publish-card">
+        <small>جاهزية المحتوى</small>
+        <strong>86%</strong>
+        <div class="mini-progress"><span style="width: 86%"></span></div>
+        <p>3 دروس تحتاج مراجعة قبل النشر.</p>
+      </div>
+    </aside>
+
+    <div class="mobile-backdrop" data-backdrop></div>
+
+    <main class="main-area">
+      <header class="topbar glass">
+        <div class="topbar-title">
+          <button class="icon-button mobile-only" type="button" data-menu aria-label="فتح القائمة">☰</button>
+          <div>
+            <p>لوحة المدرس</p>
+            <h1>مرحبا أستاذة مريم، لديك يوم إنتاجي أمامك</h1>
+          </div>
+        </div>
+
+        <form class="search-box" role="search">
+          <input type="search" placeholder="ابحث عن دورة، تلميذ، درس أو اختبار" aria-label="بحث">
+          <button type="submit" aria-label="بحث">⌕</button>
+        </form>
+
+        <div class="top-actions">
+          <button class="icon-button" type="button" data-notifications aria-label="الإشعارات">
+            <span class="dot"></span>
+            4
+          </button>
+          <div class="profile-pill">
+            <span>م</span>
+            <div>
+              <strong>مريم العيادي</strong>
+              <small>مدرسة رياضيات</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="notifications glass" data-notification-panel aria-label="الإشعارات">
+        <div class="panel-head">
+          <strong>إشعارات العمل</strong>
+          <button type="button" data-close-notifications aria-label="إغلاق">×</button>
+        </div>
+        <ul>
+          <li>15 تلميذا أنهوا اختبار الاشتقاق وينتظرون الإصلاح.</li>
+          <li>درس "النهايات" جاهز للمراجعة قبل النشر.</li>
+          <li>طلب ولي تلميذ تقريرا أسبوعيا مفصلا.</li>
+          <li>AI Studio اقترح 8 أسئلة جديدة للبكالوريا.</li>
+        </ul>
+      </section>
+
+      <section class="dashboard-grid" id="overview">
+        <article class="welcome-card glass">
+          <div class="welcome-copy">
+            <p class="eyebrow">Teacher Workspace</p>
+            <h2>حوّل أفكار الدروس إلى محتوى منظم وقابل للنشر بسرعة</h2>
+            <p>مساحة موحدة لإدارة الدورات، مراقبة تقدم التلاميذ، بناء الاختبارات، وإنشاء محتوى ذكي مطابق للمنهج التونسي.</p>
+            <div class="quick-actions">
+              <button type="button" data-go="/teacher/lessons/create">إنشاء درس</button>
+              <button type="button" data-go="/teacher/exams">بناء اختبار</button>
+              <button type="button" data-go="/teacher/exercises">إرسال واجب</button>
+              <button type="button" data-go="/teacher/analytics">تقرير التلاميذ</button>
+            </div>
+          </div>
+          <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="مدرسة تنشئ دروسا رقمية بمساعدة الذكاء الاصطناعي">
+        </article>
+
+        <section class="analytics-card glass" aria-label="تحليلات المدرس">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Analytics</p>
+              <h2>تحليلات الأداء</h2>
+            </div>
+            <button class="soft-button" type="button">آخر 30 يوما</button>
+          </div>
+          <div class="metrics">
+            <article><span>تفاعل الدروس</span><strong>78%</strong><small>+12% هذا الشهر</small></article>
+            <article><span>نسبة الإكمال</span><strong>64%</strong><small>أعلى من معدل القسم</small></article>
+            <article><span>واجبات مصححة</span><strong>312</strong><small>48 هذا الأسبوع</small></article>
+            <article><span>أسئلة AI منشورة</span><strong>186</strong><small>جاهزة داخل البنك</small></article>
+          </div>
+          <div class="chart-row">
+            <div class="bars" aria-label="رسم تفاعل أسبوعي">
+              <span style="height: 44%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 54%"></span>
+              <span class="active" style="height: 82%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 92%"></span>
+            </div>
+            <div class="donut" aria-label="نسبة جاهزية الدورات">
+              <strong>86%</strong>
+              <small>جاهزية النشر</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="courses-card glass" id="courses">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Course Management</p>
+              <h2>إدارة الدورات</h2>
+            </div>
+            <a class="soft-button" href="/teacher/courses/create/" data-route="/teacher/courses/create">دورة جديدة</a>
+          </div>
+          <div class="course-table">
+            <article>
+              <div class="course-mark blue">ر</div>
+              <div>
+                <h3>رياضيات بكالوريا: الاشتقاق</h3>
+                <p>42 تلميذا · 18 درس · آخر نشر اليوم</p>
+              </div>
+              <span class="status live">منشورة</span>
+            </article>
+            <article>
+              <div class="course-mark purple">ن</div>
+              <div>
+                <h3>النهايات والاستمرارية</h3>
+                <p>31 تلميذا · 11 درس · يحتاج مراجعة</p>
+              </div>
+              <span class="status review">مراجعة</span>
+            </article>
+            <article>
+              <div class="course-mark cyan">إ</div>
+              <div>
+                <h3>إحصاء واحتمالات</h3>
+                <p>24 تلميذا · 7 دروس · غير مكتمل</p>
+              </div>
+              <span class="status draft">مسودة</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="studio-card glass" id="studio">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">AI Content Studio</p>
+              <h2>استوديو إنشاء المحتوى</h2>
+            </div>
+            <span class="live-pill">AI جاهز</span>
+          </div>
+          <div class="studio-box">
+            <label for="studioPrompt">ماذا تريد إنشاءه؟</label>
+            <textarea id="studioPrompt" rows="4" placeholder="مثال: أنشئ اختبارا قصيرا حول الاشتقاق المركب مع 5 أسئلة متدرجة..."></textarea>
+            <div class="studio-tools">
+              <button type="button" data-studio-chip>ملخص درس</button>
+              <button type="button" data-studio-chip>اختبار قصير</button>
+              <button type="button" data-studio-chip>واجب منزلي</button>
+            </div>
+            <button class="primary-action" type="button" data-generate data-go="/teacher/ai-content-studio">توليد المحتوى</button>
+            <div class="studio-output" data-studio-output>
+              <strong>اقتراح سريع</strong>
+              <p>اختر نوع المحتوى أو اكتب طلبك، وسيقترح EduTunisia AI بنية درس، أسئلة، ومعايير تقييم.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="drafts-card glass" id="drafts">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Draft Lessons</p>
+              <h2>مسودات الدروس</h2>
+            </div>
+          </div>
+          <div class="kanban">
+            <article>
+              <span>تخطيط</span>
+              <h3>تطبيقات الاشتقاق</h3>
+              <p>إضافة أمثلة حياتية وتمارين تمهيدية.</p>
+            </article>
+            <article>
+              <span>كتابة</span>
+              <h3>النهايات من اليمين واليسار</h3>
+              <p>المحتوى مكتمل 60% ويحتاج فيديو قصير.</p>
+            </article>
+            <article>
+              <span>مراجعة</span>
+              <h3>اختبار احتمالات</h3>
+              <p>AI اقترح أسئلة إضافية للتفريق بين المستويات.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="students-card glass" id="students">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Students</p>
+              <h2>نظرة على التلاميذ</h2>
+            </div>
+            <button class="soft-button" type="button">القسم 4 علوم</button>
+          </div>
+          <div class="student-list">
+            <article>
+              <span>أ</span>
+              <div><strong>أحمد بن سالم</strong><small>تقدم 88% · يحتاج تحديا أصعب</small></div>
+              <div class="mini-progress"><span style="width: 88%"></span></div>
+            </article>
+            <article>
+              <span>س</span>
+              <div><strong>سارة الطرابلسي</strong><small>تقدم 72% · ضعف في تمارين التطبيق</small></div>
+              <div class="mini-progress"><span style="width: 72%"></span></div>
+            </article>
+            <article>
+              <span>ي</span>
+              <div><strong>ياسين الجندوبي</strong><small>تقدم 54% · يحتاج متابعة أسبوعية</small></div>
+              <div class="mini-progress"><span style="width: 54%"></span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="exams-card glass" id="exams">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Upcoming Exams</p>
+              <h2>امتحانات قادمة</h2>
+            </div>
+          </div>
+          <div class="exam-list">
+            <article>
+              <time datetime="2026-06-06">06 جوان</time>
+              <div>
+                <h3>اختبار قصير: الاشتقاق</h3>
+                <p>15 سؤالا · جاهز للنشر</p>
+              </div>
+              <button type="button" data-go="/teacher/exams">نشر</button>
+            </article>
+            <article>
+              <time datetime="2026-06-11">11 جوان</time>
+              <div>
+                <h3>فرض مراقبة: النهايات</h3>
+                <p>ينقصه إصلاح نموذجي</p>
+              </div>
+              <button type="button" data-go="/teacher/exams">تحرير</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="activity-card glass">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Workflow</p>
+              <h2>سجل الإنتاج</h2>
+            </div>
+          </div>
+          <ol class="timeline">
+            <li><span></span><div><strong>نُشر درس الاشتقاق المركب</strong><small>منذ 22 دقيقة</small></div></li>
+            <li><span></span><div><strong>تم توليد 8 أسئلة بكالوريا عبر AI Studio</strong><small>اليوم 10:15</small></div></li>
+            <li><span></span><div><strong>راجعت 15 إجابة تلميذ</strong><small>أمس 18:30</small></div></li>
+            <li><span></span><div><strong>أُرسل تقرير تقدم للأولياء</strong><small>أمس 12:05</small></div></li>
+          </ol>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="teacher-dashboard.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

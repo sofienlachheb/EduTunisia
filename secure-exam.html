@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="صفحة امتحان آمنة في EduTunisia AI مع تعليمات، مؤقت، مراقبة، حفظ تلقائي، مراجعة، نتائج وتحليل أداء بالذكاء الاصطناعي." />
+  <title>امتحان آمن | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="secure-exam.css" />
+</head>
+<body data-protected-role="student,teacher,admin">
+  <div class="exam-shell">
+    <header class="topbar glass">
+      <a class="brand" href="/student/dashboard/" data-route="/student/dashboard" aria-label="EduTunisia AI">
+        <span class="brand-mark">AI</span>
+        <span>EduTunisia <strong>AI</strong></span>
+      </a>
+      <div class="exam-title">
+        <p>امتحان آمن · رياضيات بكالوريا</p>
+        <h1>اختبار الاشتقاق والتطبيقات</h1>
+      </div>
+      <div class="status-strip" aria-label="حالة الامتحان">
+        <span class="secure-dot"></span>
+        <strong>Secure Exam Mode</strong>
+      </div>
+    </header>
+
+    <main>
+      <section class="instructions-screen glass" data-instructions>
+        <div class="instructions-copy">
+          <span class="eyebrow">قبل أن تبدأ</span>
+          <h2>اقرأ التعليمات وتأكد من جاهزية وضع الامتحان الآمن.</h2>
+          <p>سيتم تشغيل الحفظ التلقائي، مراقبة الانتقال خارج الصفحة، وتتبع مؤشرات النزاهة الأكاديمية. يمكنك وضع علامات مراجعة للأسئلة قبل الإرسال النهائي.</p>
+          <div class="instruction-grid">
+            <article><strong>45 دقيقة</strong><span>مدة الامتحان</span></article>
+            <article><strong>12 سؤالا</strong><span>اختيار متعدد، إجابة قصيرة، ترتيب</span></article>
+            <article><strong>محاولة واحدة</strong><span>لا يمكن إعادة الفتح بعد الإرسال</span></article>
+          </div>
+          <label class="consent-check">
+            <input type="checkbox" data-consent />
+            <span>أوافق على قواعد الامتحان وأتعهد بالعمل الفردي.</span>
+          </label>
+          <button class="primary-button" type="button" data-start disabled>بدء الامتحان الآمن</button>
+        </div>
+        <div class="secure-visual" aria-hidden="true">
+          <div class="shield-card">
+            <span></span>
+            <strong>نزاهة الامتحان</strong>
+            <p>مراقبة خفيفة، حفظ تلقائي، وسجل تدقيق لحظي.</p>
+          </div>
+          <div class="scan-grid">
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+          </div>
+        </div>
+      </section>
+
+      <section class="exam-workspace hidden" data-workspace>
+        <aside class="exam-sidebar glass">
+          <section class="timer-widget" aria-label="مؤقت الامتحان">
+            <span>الوقت المتبقي</span>
+            <strong data-timer>45:00</strong>
+            <div class="timer-bar"><b data-timer-bar style="width: 100%"></b></div>
+          </section>
+
+          <section class="monitoring-card">
+            <div class="section-head">
+              <div>
+                <span>Anti-Cheating</span>
+                <h2>المراقبة الآمنة</h2>
+              </div>
+              <b class="live">نشط</b>
+            </div>
+            <ul>
+              <li><span class="ok"></span> الحفظ التلقائي يعمل</li>
+              <li><span class="ok"></span> وضع التركيز مفعل</li>
+              <li><span class="warn"></span> مغادرة الصفحة: 0</li>
+            </ul>
+          </section>
+
+          <section class="questions-map">
+            <div class="section-head">
+              <div>
+                <span>Questions Map</span>
+                <h2>خريطة الأسئلة</h2>
+              </div>
+            </div>
+            <div class="map-grid" data-map>
+              <button class="active answered" type="button" data-jump="1">1</button>
+              <button type="button" data-jump="2">2</button>
+              <button class="flagged" type="button" data-jump="3">3</button>
+              <button type="button" data-jump="4">4</button>
+              <button type="button" data-jump="5">5</button>
+              <button type="button" data-jump="6">6</button>
+              <button type="button" data-jump="7">7</button>
+              <button type="button" data-jump="8">8</button>
+              <button type="button" data-jump="9">9</button>
+              <button type="button" data-jump="10">10</button>
+              <button type="button" data-jump="11">11</button>
+              <button type="button" data-jump="12">12</button>
+            </div>
+          </section>
+
+          <section class="autosave-card">
+            <span>Autosave</span>
+            <strong data-save-status>تم الحفظ الآن</strong>
+            <p>آخر مزامنة: <time data-save-time>00:00</time></p>
+          </section>
+        </aside>
+
+        <section class="question-area">
+          <article class="question-card glass">
+            <div class="question-top">
+              <div>
+                <span class="eyebrow" data-question-type>اختيار متعدد</span>
+                <h2>السؤال <span data-current-question>1</span> من 12</h2>
+              </div>
+              <button class="flag-button" type="button" data-flag>وضع علامة مراجعة</button>
+            </div>
+
+            <div class="question-body" data-question-body>
+              <p>إذا كان f(x)=x²+3x، فما قيمة f'(2)؟</p>
+              <div class="choice-list" role="radiogroup" aria-label="اختيارات السؤال">
+                <button type="button" data-choice="wrong">5</button>
+                <button type="button" data-choice="correct">7</button>
+                <button type="button" data-choice="wrong">9</button>
+                <button type="button" data-choice="wrong">11</button>
+              </div>
+            </div>
+
+            <div class="accessibility-note">
+              <strong>تلميح وصول:</strong>
+              <span>يمكنك التنقل بين الأسئلة من الخريطة أو باستخدام أزرار السابق والتالي.</span>
+            </div>
+
+            <div class="question-actions">
+              <button class="soft-button" type="button" data-prev>السابق</button>
+              <button class="soft-button" type="button" data-next>التالي</button>
+              <button class="primary-button" type="button" data-open-submit>إرسال الامتحان</button>
+            </div>
+          </article>
+
+          <section class="question-types-grid">
+            <article class="mini-type glass">
+              <span>إجابة قصيرة</span>
+              <p>اكتب النتيجة النهائية مع خطوة واحدة للتبرير.</p>
+              <input type="text" placeholder="مثال: f'(2)=7 لأن..." aria-label="إجابة قصيرة" />
+            </article>
+            <article class="mini-type glass">
+              <span>ترتيب خطوات</span>
+              <p>رتب خطوات الحل من التعريف إلى التعويض.</p>
+              <div class="step-pills"><b>التعويض</b><b>الاشتقاق</b><b>التبسيط</b></div>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <section class="results-page glass hidden" data-results>
+        <div class="results-hero">
+          <span class="eyebrow">نتيجة الامتحان</span>
+          <h2>أداء قوي مع توصيات ذكية للمراجعة.</h2>
+          <div class="score-ring" style="--p: 86%"><strong>86%</strong><span>النتيجة</span></div>
+        </div>
+
+        <div class="results-grid">
+          <article>
+            <span>الدقة</span>
+            <strong>10/12</strong>
+            <p>إجابات صحيحة مع سؤالين يحتاجان مراجعة.</p>
+          </article>
+          <article>
+            <span>الوقت</span>
+            <strong>31:42</strong>
+            <p>أسرع من متوسط الصف بـ 9 دقائق.</p>
+          </article>
+          <article>
+            <span>النزاهة</span>
+            <strong>ممتاز</strong>
+            <p>لم يتم تسجيل سلوك مريب أثناء الامتحان.</p>
+          </article>
+        </div>
+
+        <section class="ai-analysis">
+          <div class="section-head">
+            <div>
+              <span>AI Performance Analysis</span>
+              <h2>تحليل الأداء بالذكاء الاصطناعي</h2>
+            </div>
+          </div>
+          <div class="analysis-list">
+            <div><b>نقطة قوة</b><p>إتقان جيد لقواعد الاشتقاق المباشرة وتطبيقها بسرعة.</p></div>
+            <div><b>فجوة تعلم</b><p>راجع تفسير المشتقة بيانيا وربطها بميل المماس في الأسئلة المركبة.</p></div>
+            <div><b>خطة مقترحة</b><p>15 دقيقة مراجعة، 6 تمارين متدرجة، ثم اختبار قصير مخصص.</p></div>
+          </div>
+        </section>
+
+        <div class="certificate-panel">
+          <div>
+            <span>Certificate</span>
+            <h2>شهادة إكمال اختبار الاشتقاق</h2>
+            <p>متاحة للتحميل بعد اعتماد النتيجة في ملفك التعليمي.</p>
+          </div>
+          <button class="primary-button" type="button" data-certificate data-go="/student/dashboard">تحميل الشهادة</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" data-modal>
+    <section class="submit-modal glass" role="dialog" aria-modal="true" aria-labelledby="submit-title">
+      <h2 id="submit-title">إرسال الامتحان؟</h2>
+      <p>سيتم قفل الإجابات وحساب النتيجة النهائية. لديك سؤالان لم تتم مراجعتهما بعد.</p>
+      <div class="submit-summary">
+        <span>مجاب: 8</span>
+        <span>معلّم: 1</span>
+        <span>متبق: 4</span>
+      </div>
+      <div class="modal-actions">
+        <button class="soft-button" type="button" data-close-submit>العودة للمراجعة</button>
+        <button class="primary-button" type="button" data-confirm-submit>تأكيد الإرسال</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite">تم الحفظ</div>
+  <script src="secure-exam.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

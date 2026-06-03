@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة الإدارة | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin-dashboard.css" />
+</head>
+<body data-protected-role="admin">
+  <div class="admin-shell">
+    <aside class="admin-sidebar glass" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AI</div>
+        <div>
+          <strong>EduTunisia AI</strong>
+          <span>Enterprise Admin</span>
+        </div>
+      </div>
+
+      <nav class="admin-nav" aria-label="قائمة الإدارة">
+        <a class="active" href="/admin/dashboard/" data-route="/admin/dashboard"><span>مركز القيادة</span><b>01</b></a>
+        <a href="/admin/analytics/" data-route="/admin/analytics"><span>التحليلات</span><b>02</b></a>
+        <a href="/admin/users/" data-route="/admin/users"><span>المستخدمون</span><b>03</b></a>
+        <a href="/admin/schools/" data-route="/admin/schools"><span>المدارس</span><b>04</b></a>
+        <a href="/admin/billing/" data-route="/admin/billing"><span>الاشتراكات</span><b>05</b></a>
+        <a href="/admin/security/" data-route="/admin/security"><span>الأمان والتدقيق</span><b>06</b></a>
+      </nav>
+
+      <div class="admin-score">
+        <span>جاهزية النظام</span>
+        <strong>99.96%</strong>
+        <p>كل الخدمات الحرجة تعمل ضمن SLA المؤسسة.</p>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="topbar glass">
+        <button class="menu-button" id="menuButton" aria-label="فتح القائمة">
+          <i></i><i></i><i></i>
+        </button>
+        <div class="title-block">
+          <span>لوحة الإدارة التنفيذية</span>
+          <h1>مركز قيادة EduTunisia AI</h1>
+        </div>
+        <div class="top-actions">
+          <div class="period-switch" role="group" aria-label="الفترة">
+            <button class="active" data-period="today">اليوم</button>
+            <button data-period="month">الشهر</button>
+            <button data-period="year">السنة</button>
+          </div>
+          <button class="primary-btn" id="runCommand" data-go="/admin/analytics">تشغيل أمر إداري</button>
+        </div>
+      </header>
+
+      <section class="command-hero glass">
+        <div class="hero-copy">
+          <span class="eyebrow">Enterprise Command Center</span>
+          <h2>إدارة المنصة، الإيرادات، المدارس، والأمان من نقطة تحكم واحدة.</h2>
+          <p>مصممة لفريق الإدارة لمراقبة النمو، الاشتراكات، جودة الخدمة، ومخاطر النظام مع رؤى تنبؤية مدعومة بالذكاء الاصطناعي.</p>
+          <div class="hero-actions">
+            <button data-command="incident" data-go="/admin/analytics">فتح غرفة عمليات</button>
+            <button data-command="forecast" data-go="/admin/analytics">تحديث التوقعات</button>
+            <button data-command="billing" data-go="/admin/billing">مراجعة الفوترة</button>
+          </div>
+        </div>
+        <div class="mission-control" aria-hidden="true">
+          <div class="control-ring">
+            <span>99.96%</span>
+          </div>
+          <div class="control-grid">
+            <b class="ok"></b><b class="ok"></b><b class="warn"></b><b class="ok"></b>
+            <b class="ok"></b><b class="ok"></b><b class="ok"></b><b class="critical"></b>
+            <b class="ok"></b><b class="warn"></b><b class="ok"></b><b class="ok"></b>
+          </div>
+        </div>
+      </section>
+
+      <section class="kpi-row" aria-label="مؤشرات تنفيذية">
+        <article class="kpi glass">
+          <span>الإيرادات الشهرية</span>
+          <strong>د.ت 428K</strong>
+          <p class="up">+18.4% نمو متوقع</p>
+        </article>
+        <article class="kpi glass">
+          <span>المستخدمون النشطون</span>
+          <strong>86,240</strong>
+          <p class="up">12,600 مؤسسة تعليمية</p>
+        </article>
+        <article class="kpi glass">
+          <span>المدارس المتصلة</span>
+          <strong>1,184</strong>
+          <p>42 ولاية ومعتمدية</p>
+        </article>
+        <article class="kpi glass">
+          <span>مخاطر الأمان</span>
+          <strong>3</strong>
+          <p class="warn">تحتاج مراجعة خلال 24 ساعة</p>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel glass span-2">
+          <div class="panel-head">
+            <div>
+              <span>Revenue Analytics</span>
+              <h3>تحليل الإيرادات والاشتراكات</h3>
+            </div>
+            <button class="ghost-btn" data-action="refresh">تحديث</button>
+          </div>
+          <div class="revenue-chart">
+            <svg viewBox="0 0 760 290" role="img" aria-label="رسم الإيرادات">
+              <defs>
+                <linearGradient id="adminLine" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#06b6d4" />
+                  <stop offset=".55" stop-color="#2563eb" />
+                  <stop offset="1" stop-color="#7c3aed" />
+                </linearGradient>
+                <linearGradient id="adminArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#7c3aed" stop-opacity=".28" />
+                  <stop offset="1" stop-color="#2563eb" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="chart-grid" d="M42 50H720M42 105H720M42 160H720M42 215H720" />
+              <path class="chart-area" d="M48 212 C115 180 165 190 220 148 C285 98 330 124 390 94 C475 52 520 84 600 58 C660 38 695 50 720 34 L720 248 L48 248 Z" />
+              <path class="chart-line" d="M48 212 C115 180 165 190 220 148 C285 98 330 124 390 94 C475 52 520 84 600 58 C660 38 695 50 720 34" />
+              <path class="chart-line muted-line" d="M48 230 C140 198 188 205 250 170 C332 140 386 138 462 118 C535 98 610 112 720 82" />
+            </svg>
+          </div>
+          <div class="legend">
+            <span><i class="dot cyan"></i> الإيرادات الحالية</span>
+            <span><i class="dot purple"></i> توقعات AI</span>
+            <span><i class="dot blue"></i> اشتراكات المؤسسات</span>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>User Management</span>
+              <h3>إدارة المستخدمين</h3>
+            </div>
+          </div>
+          <div class="user-stack">
+            <div><span>طلبة</span><b style="--w: 86%">62,800</b></div>
+            <div><span>مدرسون</span><b style="--w: 42%">8,940</b></div>
+            <div><span>أولياء</span><b style="--w: 58%">14,120</b></div>
+            <div><span>مدراء</span><b style="--w: 18%">1,380</b></div>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>School Management</span>
+              <h3>إدارة المدارس</h3>
+            </div>
+          </div>
+          <div class="school-map">
+            <div class="map-card primary">
+              <strong>412</strong>
+              <span>مدارس عمومية</span>
+            </div>
+            <div class="map-card">
+              <strong>318</strong>
+              <span>مدارس خاصة</span>
+            </div>
+            <div class="map-card">
+              <strong>274</strong>
+              <span>معاهد ثانوية</span>
+            </div>
+            <div class="map-card">
+              <strong>170</strong>
+              <span>مراكز تدريب</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>Subscription Center</span>
+              <h3>مركز الاشتراكات</h3>
+            </div>
+          </div>
+          <div class="subscription-ring">
+            <div class="ring" style="--p: 76%"><strong>76%</strong><span>مدفوعة</span></div>
+            <ul>
+              <li><span>Enterprise</span><b>248</b></li>
+              <li><span>Pro Schools</span><b>720</b></li>
+              <li><span>Trial</span><b>196</b></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>AI Center</span>
+              <h3>مركز الذكاء الاصطناعي</h3>
+            </div>
+          </div>
+          <div class="ai-center">
+            <div><strong>14.2M</strong><span>Token تعليمي</span></div>
+            <div><strong>96%</strong><span>سلامة الإجابات</span></div>
+            <div><strong>1.7s</strong><span>زمن الاستجابة</span></div>
+            <div><strong>38K</strong><span>محتوى مولد</span></div>
+          </div>
+        </article>
+
+        <article class="panel glass span-2">
+          <div class="panel-head">
+            <div>
+              <span>Security Dashboard</span>
+              <h3>الأمان، الامتثال وسجل التدقيق</h3>
+            </div>
+            <button class="ghost-btn" data-action="security">فحص أمني</button>
+          </div>
+          <div class="security-layout">
+            <div class="security-score">
+              <span>Security Score</span>
+              <strong>91</strong>
+              <p>مستوى المؤسسة مع 3 توصيات مفتوحة.</p>
+            </div>
+            <div class="audit-log">
+              <div><b>تغيير صلاحيات</b><span>Admin-04 قبل 8 دقائق</span><em class="warn">مراجعة</em></div>
+              <div><b>تسجيل دخول SSO</b><span>مدرسة قرطاج قبل 18 دقيقة</span><em>موثق</em></div>
+              <div><b>تصدير بيانات</b><span>Finance Team قبل 42 دقيقة</span><em>مصرح</em></div>
+              <div><b>محاولة وصول</b><span>IP غير معتاد قبل ساعة</span><em class="danger">منع</em></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>System Health</span>
+              <h3>مراقبة صحة النظام</h3>
+            </div>
+          </div>
+          <div class="health-list">
+            <div><span>API Gateway</span><b class="ok">99.99%</b></div>
+            <div><span>AI Tutor Service</span><b class="ok">99.94%</b></div>
+            <div><span>Billing Engine</span><b class="warn">98.72%</b></div>
+            <div><span>Media CDN</span><b class="ok">99.98%</b></div>
+          </div>
+        </article>
+
+        <article class="panel glass span-2">
+          <div class="panel-head">
+            <div>
+              <span>Predictive Analytics</span>
+              <h3>توقعات النمو والمخاطر</h3>
+            </div>
+          </div>
+          <div class="predictive-cards">
+            <div class="forecast high">
+              <span>نمو الإيرادات المتوقع</span>
+              <strong>+24%</strong>
+              <p>مدفوع بتوسع المدارس الخاصة والاشتراكات السنوية.</p>
+            </div>
+            <div class="forecast">
+              <span>مخاطر الانسحاب</span>
+              <strong>7.8%</strong>
+              <p>أعلى في الحسابات التجريبية غير المفعلة.</p>
+            </div>
+            <div class="forecast">
+              <span>سعة الخوادم</span>
+              <strong>18 يوم</strong>
+              <p>قبل الحاجة إلى توسيع تلقائي جديد.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass command-panel">
+          <div class="panel-head">
+            <div>
+              <span>Command Center</span>
+              <h3>إجراءات سريعة</h3>
+            </div>
+          </div>
+          <div class="command-list">
+            <button data-command="users" data-go="/admin/users">مراجعة الحسابات المعلقة</button>
+            <button data-command="schools" data-go="/admin/schools">اعتماد مدارس جديدة</button>
+            <button data-command="security" data-go="/admin/security">تدوير مفاتيح API</button>
+            <button data-command="status" data-go="/admin/analytics">نشر حالة النظام</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">تم تنفيذ الأمر</div>
+  <script src="admin-dashboard.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

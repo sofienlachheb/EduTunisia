@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إدارة الدروس والوحدات في EduTunisia AI مع تنظيم بالسحب والإفلات، تحليلات، أدوات AI وتفاصيل الدرس.">
+  <title>إدارة الدروس | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lessons-management.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="lessons-shell">
+    <header class="course-header glass">
+      <div class="course-title">
+        <a class="brand" href="/teacher/courses/course-1/edit/" data-route="/teacher/courses/course-1/edit" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">Lesson Studio</p>
+          <h1>رياضيات بكالوريا: الاشتقاق وتطبيقاته</h1>
+          <p>نظم الوحدات والدروس، راقب الجودة، واستعمل أدوات AI لتحسين المحتوى قبل النشر.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-go="/teacher/lessons/create">إضافة درس</button>
+        <button class="button soft" type="button" data-go="/courses/course-1/preview">معاينة الدورة</button>
+        <button class="button primary" type="button" data-go="/teacher/courses">نشر التحديثات</button>
+      </div>
+    </header>
+
+    <section class="analytics-strip" aria-label="تحليلات الدروس">
+      <article class="metric-card glass">
+        <span>الدروس</span>
+        <strong>24</strong>
+        <small>18 منشورة · 6 مسودات</small>
+      </article>
+      <article class="metric-card glass">
+        <span>متوسط الإكمال</span>
+        <strong>76%</strong>
+        <small>+11% هذا الأسبوع</small>
+      </article>
+      <article class="metric-card glass">
+        <span>زمن التعلم</span>
+        <strong>8.5س</strong>
+        <small>محتوى فيديو وتمارين</small>
+      </article>
+      <article class="metric-card glass">
+        <span>تنبيهات الجودة</span>
+        <strong>4</strong>
+        <small>تحتاج مراجعة قبل النشر</small>
+      </article>
+    </section>
+
+    <main class="workspace-grid">
+      <aside class="module-tree glass" aria-label="هيكل الوحدات">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Modules Tree</p>
+            <h2>هيكل الدورة</h2>
+          </div>
+          <button class="icon-button" type="button" data-add-module aria-label="إضافة وحدة">+</button>
+        </div>
+        <div class="tree-list" data-tree-list>
+          <button class="tree-item active" type="button" data-module-filter="all">
+            <span>▦</span>
+            <strong>كل الدروس</strong>
+            <small>24</small>
+          </button>
+          <button class="tree-item" type="button" data-module-filter="basics">
+            <span>01</span>
+            <strong>أساسيات الاشتقاق</strong>
+            <small>9</small>
+          </button>
+          <button class="tree-item" type="button" data-module-filter="applications">
+            <span>02</span>
+            <strong>تطبيقات في الدوال</strong>
+            <small>8</small>
+          </button>
+          <button class="tree-item" type="button" data-module-filter="exam">
+            <span>03</span>
+            <strong>محاكاة الامتحان</strong>
+            <small>7</small>
+          </button>
+        </div>
+
+        <section class="ai-tools">
+          <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="أدوات تعليمية ذكية للمدرس">
+          <p class="eyebrow">AI Lesson Tools</p>
+          <h2>مساعد إنتاج الدروس</h2>
+          <button type="button" data-ai-action="outline" data-go="/teacher/lessons/create">اقتراح درس جديد</button>
+          <button type="button" data-ai-action="quiz" data-go="/teacher/question-bank">توليد اختبار قصير</button>
+          <button type="button" data-ai-action="summary" data-go="/teacher/ai-content-studio">تلخيص درس طويل</button>
+        </section>
+      </aside>
+
+      <section class="lessons-panel glass">
+        <div class="toolbar">
+          <form class="search-box" role="search">
+            <input type="search" placeholder="ابحث في الدروس، النوع أو الحالة" aria-label="بحث في الدروس" data-search>
+            <button type="submit" aria-label="بحث">⌕</button>
+          </form>
+          <div class="filters">
+            <select data-filter="type" aria-label="نوع الدرس">
+              <option value="all">كل الأنواع</option>
+              <option value="video">فيديو</option>
+              <option value="text">نصي</option>
+              <option value="quiz">اختبار</option>
+              <option value="assignment">واجب</option>
+            </select>
+            <select data-filter="status" aria-label="حالة الدرس">
+              <option value="all">كل الحالات</option>
+              <option value="published">منشور</option>
+              <option value="draft">مسودة</option>
+              <option value="review">مراجعة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bulk-bar" data-bulk-bar>
+          <strong><span data-selected-count>0</span> دروس محددة</strong>
+          <button type="button">نقل</button>
+          <button type="button">نسخ</button>
+          <button type="button">نشر</button>
+          <button class="danger" type="button" data-open-delete>حذف</button>
+        </div>
+
+        <div class="lesson-board" data-lesson-board>
+          <article class="lesson-card selected" draggable="true" data-module="basics" data-type="video" data-status="published" data-title="مفهوم المشتقة">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon video">▶</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 1</span><span class="status published">منشور</span></div>
+              <h2>مفهوم المشتقة</h2>
+              <p>فيديو · 12 دقيقة · 3 أمثلة تفاعلية</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+
+          <article class="lesson-card" draggable="true" data-module="basics" data-type="text" data-status="review" data-title="قواعد الاشتقاق">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon text">T</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 1</span><span class="status review">مراجعة</span></div>
+              <h2>قواعد الاشتقاق</h2>
+              <p>درس نصي · يحتاج أمثلة إضافية</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+
+          <article class="lesson-card" draggable="true" data-module="basics" data-type="quiz" data-status="draft" data-title="اختبار سريع في القواعد">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon quiz">؟</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 1</span><span class="status draft">مسودة</span></div>
+              <h2>اختبار سريع في القواعد</h2>
+              <p>8 أسئلة · AI يقترح سؤالين إضافيين</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+
+          <article class="lesson-card" draggable="true" data-module="applications" data-type="video" data-status="published" data-title="دراسة التغيرات">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon video">▶</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 2</span><span class="status published">منشور</span></div>
+              <h2>دراسة التغيرات</h2>
+              <p>فيديو · 18 دقيقة · تمرين تطبيقي</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+
+          <article class="lesson-card" draggable="true" data-module="applications" data-type="assignment" data-status="review" data-title="واجب جدول التغيرات">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon assignment">✓</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 2</span><span class="status review">مراجعة</span></div>
+              <h2>واجب جدول التغيرات</h2>
+              <p>12 تمرينا · تصحيح نموذجي ناقص</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+
+          <article class="lesson-card" draggable="true" data-module="exam" data-type="quiz" data-status="draft" data-title="محاكاة بكالوريا">
+            <label class="check"><input type="checkbox" data-select-lesson></label>
+            <span class="drag">☰</span>
+            <div class="lesson-icon quiz">★</div>
+            <div class="lesson-main">
+              <div class="lesson-meta"><span>وحدة 3</span><span class="status draft">مسودة</span></div>
+              <h2>محاكاة بكالوريا</h2>
+              <p>60 دقيقة · موضوع شامل مع سلم إصلاح</p>
+            </div>
+            <button class="lesson-action" type="button" data-open-details>تفاصيل</button>
+          </article>
+        </div>
+      </section>
+
+      <aside class="details-panel glass" data-details-panel aria-label="تفاصيل الدرس">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Lesson Details</p>
+            <h2 data-detail-title>مفهوم المشتقة</h2>
+          </div>
+          <span class="status published" data-detail-status>منشور</span>
+        </div>
+
+        <div class="detail-preview">
+          <div class="preview-icon">▶</div>
+          <div>
+            <strong data-detail-type>فيديو · 12 دقيقة</strong>
+            <p>آخر تحديث: اليوم 10:30 · بواسطة أ. مريم</p>
+          </div>
+        </div>
+
+        <section class="quality-card">
+          <h3>مؤشرات الجودة</h3>
+          <div class="quality-row"><span>وضوح الشرح</span><strong>92%</strong></div>
+          <div class="quality-row"><span>تفاعل التلاميذ</span><strong>78%</strong></div>
+          <div class="quality-row"><span>صعوبة مناسبة</span><strong>84%</strong></div>
+        </section>
+
+        <section class="detail-actions">
+          <button class="button primary" type="button" data-go="/teacher/lessons/lesson-1/edit">تحرير الدرس</button>
+          <button class="button soft" type="button" data-go="/student/lessons/lesson-1">معاينة</button>
+          <button class="button soft" type="button">نسخ</button>
+          <button class="button danger" type="button" data-open-delete>حذف</button>
+        </section>
+
+        <section class="ai-suggestion">
+          <p class="eyebrow">AI Suggestion</p>
+          <h3>اقتراح تحسين</h3>
+          <p data-ai-output>أضف سؤالا تطبيقيا بعد الدقيقة 08:20 لأن نسبة التوقف ترتفع في هذا الجزء.</p>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+  <section class="delete-modal glass" data-delete-modal role="dialog" aria-modal="true" aria-labelledby="deleteLessonTitle" hidden>
+    <h2 id="deleteLessonTitle">حذف الدرس؟</h2>
+    <p>سيتم نقل الدرس إلى الأرشيف ويمكن استرجاعه لاحقا من إعدادات الدورة.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-delete>إلغاء</button>
+      <button class="button danger" type="button" data-confirm-delete>تأكيد الحذف</button>
+    </div>
+  </section>
+
+  <div class="toast" data-toast>تم تحديث الترتيب</div>
+  <script src="lessons-management.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

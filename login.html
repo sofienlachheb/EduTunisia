@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تسجيل الدخول إلى EduTunisia AI، منصة التعلم الذكي للتلاميذ في تونس.">
+  <title>تسجيل الدخول | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="visual-panel" aria-label="EduTunisia AI">
+      <div class="visual-overlay"></div>
+      <a class="brand" href="/" data-route="/" aria-label="العودة إلى EduTunisia AI">
+        <span class="brand-mark">E</span>
+        <span>EduTunisia <strong>AI</strong></span>
+      </a>
+      <div class="visual-content">
+        <p class="eyebrow">منصة التعلم الذكي في تونس</p>
+        <h1>ادخل إلى مسارك الدراسي الشخصي</h1>
+        <p>أستاذ ذكي، تمارين تكيفية، وتقارير تقدم واضحة للتلميذ والولي في تجربة واحدة موثوقة.</p>
+      </div>
+      <div class="trust-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>جلسة آمنة ومحمية</strong>
+          <span>تشفير حديث وحماية لبيانات التلاميذ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-panel" aria-label="تسجيل الدخول">
+      <div class="mobile-brand">
+        <a class="brand" href="/" data-route="/" aria-label="العودة إلى EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+      </div>
+
+      <form class="login-card" action="/student/dashboard/" method="post" data-login-form>
+        <div class="card-header">
+          <p class="eyebrow">مرحبا بعودتك</p>
+          <h2>تسجيل الدخول</h2>
+          <p>واصل التعلم من آخر درس، وتابع أهدافك اليومية بثقة.</p>
+        </div>
+
+        <label class="field">
+          <span>البريد الإلكتروني</span>
+          <input type="email" name="email" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+
+        <label class="field">
+          <span>كلمة المرور</span>
+          <div class="password-wrap">
+            <input id="password" type="password" name="password" autocomplete="current-password" placeholder="••••••••" required>
+            <button class="password-toggle" type="button" aria-label="إظهار كلمة المرور" aria-pressed="false" data-password-toggle>
+              <span data-show>إظهار</span>
+              <span data-hide>إخفاء</span>
+            </button>
+          </div>
+        </label>
+
+        <label class="field">
+          <span>نوع الحساب</span>
+          <select name="role" data-login-role required>
+            <option value="student">طالب</option>
+            <option value="teacher">مدرس</option>
+            <option value="parent">ولي</option>
+            <option value="admin">مدير النظام</option>
+          </select>
+        </label>
+
+        <div class="form-row">
+          <label class="remember">
+            <input type="checkbox" name="remember">
+            <span>تذكرني</span>
+          </label>
+          <a href="/register/" data-route="/register">نسيت كلمة المرور؟</a>
+        </div>
+
+        <button class="btn btn-primary" type="submit">تسجيل الدخول</button>
+
+        <div class="divider"><span>أو تابع باستخدام</span></div>
+
+        <div class="social-grid">
+          <button class="btn btn-social" type="button" data-social-login>
+            <span class="social-icon google">G</span>
+            Google
+          </button>
+          <button class="btn btn-social" type="button" data-social-login>
+            <span class="social-icon microsoft">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            Microsoft
+          </button>
+        </div>
+
+        <p class="register-line">
+          ليس لديك حساب؟
+          <a href="register.html">أنشئ حسابا جديدا</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <div class="toast" data-toast>تم تسجيل الدخول بنجاح</div>
+  <script src="login.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+

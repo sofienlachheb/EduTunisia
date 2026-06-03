@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إدارة بنك الأسئلة في EduTunisia AI مع فلاتر متقدمة، محرر أسئلة، مولد AI، استيراد وتصدير وتحليلات.">
+  <title>بنك الأسئلة | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="question-bank.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="bank-shell">
+    <header class="bank-header glass">
+      <div class="brand-row">
+        <a class="brand" href="/teacher/dashboard/" data-route="/teacher/dashboard" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">Assessment Studio</p>
+          <h1>إدارة بنك الأسئلة</h1>
+          <p>أنشئ، راجع، صنّف، وحلل الأسئلة من مساحة واحدة مصممة للإنتاجية والاختبارات الذكية.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-open-import>استيراد / تصدير</button>
+        <button class="button primary" type="button" data-open-ai>توليد أسئلة AI</button>
+      </div>
+    </header>
+
+    <section class="stats-grid" aria-label="إحصائيات بنك الأسئلة">
+      <article class="stat-card glass"><span>إجمالي الأسئلة</span><strong>2,486</strong><small>+184 هذا الشهر</small></article>
+      <article class="stat-card glass"><span>جاهزة للنشر</span><strong>1,928</strong><small>77% من البنك</small></article>
+      <article class="stat-card glass"><span>تحتاج مراجعة</span><strong>126</strong><small>معظمها صعوبة متقدمة</small></article>
+      <article class="stat-card glass"><span>دقة الإجابات</span><strong>91%</strong><small>حسب تحليل AI</small></article>
+    </section>
+
+    <main class="bank-layout">
+      <section class="questions-panel glass">
+        <div class="toolbar">
+          <form class="search-box" role="search">
+            <input type="search" placeholder="ابحث في نص السؤال، الوسوم، المادة أو الدرس" aria-label="بحث في بنك الأسئلة" data-search>
+            <button type="submit" aria-label="بحث">⌕</button>
+          </form>
+          <div class="filters">
+            <select data-filter="subject" aria-label="المادة">
+              <option value="all">كل المواد</option>
+              <option value="math">رياضيات</option>
+              <option value="physics">فيزياء</option>
+              <option value="arabic">عربية</option>
+            </select>
+            <select data-filter="type" aria-label="نوع السؤال">
+              <option value="all">كل الأنواع</option>
+              <option value="mcq">اختيار متعدد</option>
+              <option value="short">إجابة قصيرة</option>
+              <option value="truefalse">صح / خطأ</option>
+            </select>
+            <select data-filter="difficulty" aria-label="الصعوبة">
+              <option value="all">كل الصعوبات</option>
+              <option value="easy">سهل</option>
+              <option value="medium">متوسط</option>
+              <option value="hard">متقدم</option>
+            </select>
+            <select data-filter="status" aria-label="الحالة">
+              <option value="all">كل الحالات</option>
+              <option value="ready">جاهز</option>
+              <option value="review">مراجعة</option>
+              <option value="draft">مسودة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bulk-bar" data-bulk-bar>
+          <strong><span data-selected-count>0</span> أسئلة محددة</strong>
+          <button type="button" data-go="/teacher/exams">إضافة لاختبار</button>
+          <button type="button">تغيير الصعوبة</button>
+          <button type="button" data-go="/teacher/analytics">تصدير</button>
+          <button class="danger" type="button">أرشفة</button>
+        </div>
+
+        <div class="question-list" data-question-list>
+          <article class="question-card selected" data-title="المعنى الهندسي للمشتقة" data-subject="math" data-type="mcq" data-difficulty="medium" data-status="ready">
+            <label><input type="checkbox" data-select-question></label>
+            <div class="question-icon">MCQ</div>
+            <div class="question-body">
+              <div class="meta"><span>رياضيات · الاشتقاق</span><span class="status ready">جاهز</span></div>
+              <h2>ما المعنى الهندسي للمشتقة في نقطة؟</h2>
+              <p>اختيار متعدد · متوسط · استعمل في 8 اختبارات</p>
+              <div class="tags"><span>بكالوريا</span><span>مماس</span><span>تحليل</span></div>
+            </div>
+            <button type="button" data-preview>معاينة</button>
+          </article>
+
+          <article class="question-card" data-title="حساب مشتقة x مربع" data-subject="math" data-type="short" data-difficulty="easy" data-status="ready">
+            <label><input type="checkbox" data-select-question></label>
+            <div class="question-icon short">∑</div>
+            <div class="question-body">
+              <div class="meta"><span>رياضيات · قواعد الاشتقاق</span><span class="status ready">جاهز</span></div>
+              <h2>إذا كان f(x)=x²، احسب f'(3).</h2>
+              <p>إجابة قصيرة · سهل · نسبة نجاح 82%</p>
+              <div class="tags"><span>تطبيق مباشر</span><span>سهل</span></div>
+            </div>
+            <button type="button" data-preview>معاينة</button>
+          </article>
+
+          <article class="question-card" data-title="إشارة المشتقة والتزايد" data-subject="math" data-type="truefalse" data-difficulty="easy" data-status="review">
+            <label><input type="checkbox" data-select-question></label>
+            <div class="question-icon tf">T/F</div>
+            <div class="question-body">
+              <div class="meta"><span>رياضيات · دراسة الدوال</span><span class="status review">مراجعة</span></div>
+              <h2>إذا كانت المشتقة موجبة على مجال، فالدالة متزايدة عليه.</h2>
+              <p>صح / خطأ · سهل · يحتاج صياغة أوضح</p>
+              <div class="tags"><span>إشارة</span><span>تغيرات</span></div>
+            </div>
+            <button type="button" data-preview>معاينة</button>
+          </article>
+
+          <article class="question-card" data-title="تمرين شامل في الاشتقاق" data-subject="math" data-type="mcq" data-difficulty="hard" data-status="draft">
+            <label><input type="checkbox" data-select-question></label>
+            <div class="question-icon hard">★</div>
+            <div class="question-body">
+              <div class="meta"><span>رياضيات · بكالوريا</span><span class="status draft">مسودة</span></div>
+              <h2>أي اختيار يمثل جدول تغيرات الدالة بعد دراسة إشارة مشتقتها؟</h2>
+              <p>اختيار متعدد · متقدم · AI يقترح تبسيط الخيارات</p>
+              <div class="tags"><span>شامل</span><span>جدول تغيرات</span><span>متقدم</span></div>
+            </div>
+            <button type="button" data-preview>معاينة</button>
+          </article>
+        </div>
+      </section>
+
+      <aside class="right-rail">
+        <section class="preview-panel glass">
+          <p class="eyebrow">Question Preview</p>
+          <h2 data-preview-title>ما المعنى الهندسي للمشتقة في نقطة؟</h2>
+          <p data-preview-meta>رياضيات · اختيار متعدد · متوسط</p>
+          <div class="answer-preview">
+            <button>مساحة تحت المنحنى</button>
+            <button class="correct">ميل المماس في تلك النقطة</button>
+            <button>قيمة الدالة نفسها</button>
+          </div>
+          <div class="quality-score">
+            <span>جودة السؤال</span>
+            <strong>94%</strong>
+          </div>
+        </section>
+
+        <section class="editor-panel glass">
+          <p class="eyebrow">Question Editor</p>
+          <h2>تحرير سريع</h2>
+          <label>نص السؤال<input type="text" value="ما المعنى الهندسي للمشتقة في نقطة؟" data-editor-title></label>
+          <label>الإجابة الصحيحة<input type="text" value="ميل المماس في تلك النقطة"></label>
+          <label>وسوم<input type="text" value="اشتقاق، مماس، بكالوريا"></label>
+          <button class="button primary" type="button" data-save-editor>حفظ التعديلات</button>
+        </section>
+      </aside>
+    </main>
+
+    <section class="bottom-grid">
+      <section class="ai-generator glass">
+        <div>
+          <p class="eyebrow">AI Question Generator</p>
+          <h2>توليد أسئلة ذكية</h2>
+          <p>حوّل درس أو هدف تعلم إلى أسئلة متدرجة مع إجابات نموذجية وتحليل صعوبة.</p>
+        </div>
+        <div class="ai-form">
+          <input type="text" placeholder="مثال: 5 أسئلة حول التفسير الهندسي للمشتقة" data-ai-prompt>
+          <button class="button primary" type="button" data-generate>توليد</button>
+        </div>
+        <div class="ai-output" data-ai-output>AI سيقترح أسئلة متدرجة هنا.</div>
+      </section>
+
+      <section class="import-export glass" data-import-center>
+        <p class="eyebrow">Import / Export Center</p>
+        <h2>مركز الاستيراد والتصدير</h2>
+        <div class="import-actions">
+          <button type="button">استيراد CSV</button>
+          <button type="button">استيراد PDF</button>
+          <button type="button">تصدير XLSX</button>
+          <button type="button" data-go="/teacher/exams">تصدير للاختبار</button>
+        </div>
+      </section>
+
+      <section class="analytics-card glass">
+        <p class="eyebrow">Analytics</p>
+        <h2>تحليلات البنك</h2>
+        <div class="chart-bars" aria-label="توزيع الصعوبة">
+          <span style="height: 42%"></span>
+          <span style="height: 72%"></span>
+          <span style="height: 56%"></span>
+          <span class="active" style="height: 88%"></span>
+          <span style="height: 64%"></span>
+        </div>
+      </section>
+
+      <section class="history-card glass">
+        <p class="eyebrow">Version History</p>
+        <h2>سجل النسخ</h2>
+        <ol>
+          <li><strong>v4</strong><span>تحسين صياغة سؤال المماس · اليوم</span></li>
+          <li><strong>v3</strong><span>إضافة وسوم بكالوريا · أمس</span></li>
+          <li><strong>v2</strong><span>تعديل الإجابة النموذجية · 24 ماي</span></li>
+        </ol>
+      </section>
+
+      <section class="insights-card glass">
+        <p class="eyebrow">Smart Insights</p>
+        <h2>رؤى ذكية</h2>
+        <ul>
+          <li>أسئلة جدول التغيرات صعبة أكثر من المتوقع بنسبة 18%.</li>
+          <li>يفضل إضافة أمثلة مرئية قبل أسئلة المماس.</li>
+          <li>126 سؤالا يحتاج مراجعة قبل إدراجه في اختبارات رسمية.</li>
+        </ul>
+      </section>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+  <section class="modal glass" data-ai-modal role="dialog" aria-modal="true" aria-labelledby="aiTitle" hidden>
+    <div class="modal-head">
+      <h2 id="aiTitle">توليد أسئلة AI</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>اختر المادة والدرس والصعوبة، وسيقترح EduTunisia AI أسئلة قابلة للمراجعة.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إلغاء</button>
+      <button class="button primary" type="button" data-generate>توليد الآن</button>
+    </div>
+  </section>
+
+  <section class="modal glass" data-import-modal role="dialog" aria-modal="true" aria-labelledby="importTitle" hidden>
+    <div class="modal-head">
+      <h2 id="importTitle">مركز الاستيراد والتصدير</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>استورد أسئلة من CSV/PDF أو صدّر البنك بصيغ مناسبة للامتحانات والتقارير.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إغلاق</button>
+      <button class="button primary" type="button" data-go="/teacher/question-bank">اختيار ملف</button>
+    </div>
+  </section>
+
+  <div class="toast" data-toast>تم الحفظ</div>
+  <script src="question-bank.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إنشاء وتحرير دورة في EduTunisia AI عبر استوديو مدرس متكامل للمحتوى، التسعير، SEO والنشر.">
+  <title>إنشاء دورة | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="create-course.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="studio-shell">
+    <header class="studio-header glass">
+      <div class="brand-row">
+        <a class="brand" href="/teacher/courses/" data-route="/teacher/courses" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">Instructor Studio</p>
+          <h1>إنشاء وتحرير دورة</h1>
+          <p>ابن دورة احترافية من الفكرة إلى النشر مع أدوات إنتاج، تسعير، SEO ومعاينة مباشرة.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-save-draft>حفظ كمسودة</button>
+        <button class="button primary" type="button" data-open-publish>جاهز للنشر</button>
+      </div>
+    </header>
+
+    <nav class="step-tabs glass" aria-label="خطوات إنشاء الدورة">
+      <button class="active" type="button" data-tab="basic"><span>01</span>المعلومات الأساسية</button>
+      <button type="button" data-tab="content"><span>02</span>بناء المحتوى</button>
+      <button type="button" data-tab="pricing"><span>03</span>التسعير</button>
+      <button type="button" data-tab="seo"><span>04</span>SEO</button>
+      <button type="button" data-tab="publishing"><span>05</span>النشر</button>
+    </nav>
+
+    <main class="editor-layout">
+      <section class="editor-main">
+        <section class="tab-panel active glass" data-panel="basic">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Basic Information</p>
+              <h2>هوية الدورة</h2>
+            </div>
+            <span class="completion-pill">72% مكتمل</span>
+          </div>
+
+          <div class="basic-grid">
+            <label class="field full">
+              <span>عنوان الدورة</span>
+              <input type="text" value="رياضيات بكالوريا: الاشتقاق وتطبيقاته" data-title-input>
+            </label>
+            <label class="field">
+              <span>المادة</span>
+              <select>
+                <option>رياضيات</option>
+                <option>فيزياء</option>
+                <option>علوم الحياة والأرض</option>
+                <option>عربية</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>المستوى</span>
+              <select>
+                <option>بكالوريا</option>
+                <option>ثانوي</option>
+                <option>إعدادي</option>
+                <option>ابتدائي</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>مدة الدورة</span>
+              <input type="text" value="6 أسابيع · 18 درس">
+            </label>
+            <label class="field">
+              <span>صعوبة الدورة</span>
+              <select>
+                <option>متوسطة</option>
+                <option>مبتدئة</option>
+                <option>متقدمة</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="thumbnail-editor">
+            <div class="upload-box" data-upload-box>
+              <input type="file" accept="image/*" aria-label="رفع صورة الدورة">
+              <strong>رفع صورة الدورة</strong>
+              <span>PNG أو JPG · مقاس مقترح 1280×720</span>
+            </div>
+            <div class="thumbnail-preview">
+              <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="معاينة صورة الدورة">
+              <div>
+                <strong>صورة احترافية جاهزة</strong>
+                <p>يمكنك رفع صورة جديدة أو استعمال الصورة الحالية كبطاقة تعريف للدورة.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field full">
+            <span>وصف الدورة</span>
+            <div class="rich-editor">
+              <div class="editor-toolbar" aria-label="أدوات تحرير النص">
+                <button type="button"><b>B</b></button>
+                <button type="button"><i>I</i></button>
+                <button type="button">•</button>
+                <button type="button">H2</button>
+                <button type="button">↗</button>
+              </div>
+              <div class="editor-area" contenteditable="true" data-description>
+                دورة مركزة تساعد تلامذة البكالوريا على فهم الاشتقاق، تطبيقاته، وكيفية التعامل مع تمارين الامتحان الوطني خطوة بخطوة.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="content">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Content Builder</p>
+              <h2>بناء الوحدات والدروس</h2>
+            </div>
+            <button class="button soft" type="button" data-add-module>إضافة وحدة</button>
+          </div>
+
+          <section class="ai-builder">
+            <div>
+              <p class="eyebrow">AI Course Builder</p>
+              <h3>حوّل خطة الدرس إلى هيكل دورة</h3>
+              <p>اكتب هدف الدورة وسيقترح EduTunisia AI وحدات، دروسا، تمارين وأسئلة تقييم.</p>
+            </div>
+            <div class="ai-form">
+              <input type="text" placeholder="مثال: دورة حول الاشتقاق المركب مع تمارين بكالوريا" data-ai-input>
+              <button class="button primary" type="button" data-ai-generate>توليد خطة</button>
+            </div>
+          </section>
+
+          <div class="builder-board" data-builder-board>
+            <article class="module-card" draggable="true">
+              <div class="module-head">
+                <span>وحدة 1</span>
+                <strong>أساسيات الاشتقاق</strong>
+                <button type="button">⋯</button>
+              </div>
+              <div class="lesson-list">
+                <div class="lesson-item" draggable="true"><span>☰</span> مفهوم المشتقة <small>فيديو · 12د</small></div>
+                <div class="lesson-item" draggable="true"><span>☰</span> قواعد الاشتقاق <small>درس نصي</small></div>
+                <div class="lesson-item" draggable="true"><span>☰</span> اختبار قصير <small>8 أسئلة</small></div>
+              </div>
+            </article>
+
+            <article class="module-card" draggable="true">
+              <div class="module-head">
+                <span>وحدة 2</span>
+                <strong>تطبيقات في الدوال</strong>
+                <button type="button">⋯</button>
+              </div>
+              <div class="lesson-list">
+                <div class="lesson-item" draggable="true"><span>☰</span> دراسة التغيرات <small>فيديو · 18د</small></div>
+                <div class="lesson-item" draggable="true"><span>☰</span> جدول التغيرات <small>تمارين</small></div>
+              </div>
+            </article>
+
+            <article class="module-card" draggable="true">
+              <div class="module-head">
+                <span>وحدة 3</span>
+                <strong>محاكاة الامتحان</strong>
+                <button type="button">⋯</button>
+              </div>
+              <div class="lesson-list">
+                <div class="lesson-item" draggable="true"><span>☰</span> موضوع نموذجي <small>60د</small></div>
+                <div class="lesson-item" draggable="true"><span>☰</span> إصلاح مفصل <small>PDF</small></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="pricing">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Pricing</p>
+              <h2>إعدادات التسعير</h2>
+            </div>
+            <span class="completion-pill">نموذج مدفوع</span>
+          </div>
+          <div class="pricing-grid">
+            <label class="pricing-option active">
+              <input type="radio" name="pricing" checked>
+              <strong>مدفوعة</strong>
+              <span>بيع الدورة بسعر محدد للتلاميذ أو المجموعات.</span>
+            </label>
+            <label class="pricing-option">
+              <input type="radio" name="pricing">
+              <strong>مجانية</strong>
+              <span>فتح الدورة كتجربة مجانية أو محتوى تمهيدي.</span>
+            </label>
+            <label class="pricing-option">
+              <input type="radio" name="pricing">
+              <strong>ضمن اشتراك</strong>
+              <span>إتاحتها فقط للمشتركين في خطة EduTunisia AI.</span>
+            </label>
+          </div>
+          <div class="basic-grid">
+            <label class="field">
+              <span>السعر الشهري</span>
+              <input type="number" value="29" min="0">
+            </label>
+            <label class="field">
+              <span>سعر الدورة الكامل</span>
+              <input type="number" value="79" min="0">
+            </label>
+            <label class="field">
+              <span>خصم الإطلاق</span>
+              <input type="number" value="20" min="0" max="100">
+            </label>
+            <label class="field">
+              <span>فترة التجربة</span>
+              <select>
+                <option>درس واحد مجاني</option>
+                <option>أسبوع مجاني</option>
+                <option>بدون تجربة</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="seo">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">SEO Settings</p>
+              <h2>تحسين الظهور والبحث</h2>
+            </div>
+            <span class="completion-pill">SEO 88%</span>
+          </div>
+          <div class="basic-grid">
+            <label class="field full">
+              <span>عنوان SEO</span>
+              <input type="text" value="دورة الاشتقاق بكالوريا علوم - EduTunisia AI">
+            </label>
+            <label class="field full">
+              <span>وصف SEO</span>
+              <textarea rows="4">تعلم الاشتقاق وتطبيقاته للبكالوريا مع شرح مبسط، تمارين متدرجة، واختبارات ذكية مطابقة للمنهج التونسي.</textarea>
+            </label>
+            <label class="field">
+              <span>الرابط المختصر</span>
+              <input type="text" value="bac-derivatives">
+            </label>
+            <label class="field">
+              <span>الكلمات المفتاحية</span>
+              <input type="text" value="اشتقاق، بكالوريا، رياضيات، تونس">
+            </label>
+          </div>
+          <div class="seo-preview">
+            <small>معاينة نتيجة البحث</small>
+            <strong>دورة الاشتقاق بكالوريا علوم - EduTunisia AI</strong>
+            <span>edutunisia.ai/courses/bac-derivatives</span>
+            <p>تعلم الاشتقاق وتطبيقاته للبكالوريا مع شرح مبسط، تمارين متدرجة، واختبارات ذكية...</p>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="publishing">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Publishing</p>
+              <h2>إعدادات النشر</h2>
+            </div>
+            <span class="completion-pill">جاهزة تقريبا</span>
+          </div>
+          <div class="publish-grid">
+            <label class="switch-row"><input type="checkbox" checked> نشر الدورة للتلاميذ</label>
+            <label class="switch-row"><input type="checkbox" checked> إرسال إشعار عند النشر</label>
+            <label class="switch-row"><input type="checkbox"> جدولة النشر لاحقا</label>
+            <label class="switch-row"><input type="checkbox" checked> تفعيل شهادات الإكمال</label>
+            <label class="switch-row"><input type="checkbox" checked> السماح بتعليقات التلاميذ</label>
+            <label class="switch-row"><input type="checkbox"> جعل الدورة خاصة بمجموعة معينة</label>
+          </div>
+          <div class="publish-checklist">
+            <h3>قائمة الجاهزية</h3>
+            <ul>
+              <li class="done">العنوان والوصف مكتملان</li>
+              <li class="done">صورة الدورة موجودة</li>
+              <li class="done">3 وحدات على الأقل</li>
+              <li>إضافة اختبار نهائي موصى بها</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <aside class="preview-sidebar">
+        <section class="preview-card glass">
+          <p class="eyebrow">Live Preview</p>
+          <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="معاينة صورة الدورة">
+          <div class="preview-body">
+            <span class="status">بكالوريا · رياضيات</span>
+            <h2 data-preview-title>رياضيات بكالوريا: الاشتقاق وتطبيقاته</h2>
+            <p data-preview-description>دورة مركزة تساعد تلامذة البكالوريا على فهم الاشتقاق، تطبيقاته، وكيفية التعامل مع تمارين الامتحان الوطني خطوة بخطوة.</p>
+            <div class="preview-stats">
+              <span>18 درس</span>
+              <span>6 أسابيع</span>
+              <span>29 د.ت</span>
+            </div>
+            <button class="button primary" type="button" data-go="/courses/course-1/preview">معاينة صفحة الدورة</button>
+          </div>
+        </section>
+
+        <section class="score-card glass">
+          <div class="score-ring"><strong>86%</strong><small>جاهزية</small></div>
+          <ul>
+            <li><span></span>محتوى منظم وقابل للنشر</li>
+            <li><span></span>SEO جيد للبحث الداخلي</li>
+            <li><span></span>التسعير واضح للتلاميذ</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+  <section class="modal glass" data-publish-modal role="dialog" aria-modal="true" aria-labelledby="publishTitle" hidden>
+    <div class="modal-head">
+      <h2 id="publishTitle">تأكيد نشر الدورة</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>سيتم نشر الدورة وإظهارها للتلاميذ حسب إعدادات النشر الحالية. يمكنك الرجوع وتعديلها في أي وقت.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إلغاء</button>
+      <button class="button primary" type="button" data-confirm-publish>نشر الآن</button>
+    </div>
+  </section>
+  <div class="toast" data-toast>تم الحفظ</div>
+
+  <script src="create-course.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

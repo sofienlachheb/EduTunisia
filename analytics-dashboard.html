@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التحليلات | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="analytics-dashboard.css" />
+</head>
+<body data-protected-role="teacher,admin">
+  <div class="app-shell">
+    <aside class="sidebar glass" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">AI</div>
+        <div>
+          <strong>EduTunisia AI</strong>
+          <span>مركز ذكاء التعليم</span>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="التنقل الرئيسي">
+        <a href="/teacher/dashboard/" data-route="/teacher/dashboard"><span>لوحة المدرس</span><b>01</b></a>
+        <a href="/teacher/courses/" data-route="/teacher/courses"><span>الدورات</span><b>02</b></a>
+        <a href="/teacher/lessons/" data-route="/teacher/lessons"><span>الدروس</span><b>03</b></a>
+        <a class="active" href="/teacher/analytics/" data-route="/teacher/analytics"><span>التحليلات</span><b>04</b></a>
+        <a href="/teacher/ai-content-studio/" data-route="/teacher/ai-content-studio"><span>استوديو الذكاء</span><b>05</b></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <span>مؤشر الثقة</span>
+        <strong>94%</strong>
+        <p>جودة البيانات ممتازة بعد مزامنة آخر 12 ساعة.</p>
+      </div>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar glass">
+        <button class="icon-button" id="sidebarToggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="top-title">
+          <p>لوحة التحليلات التنفيذية</p>
+          <h1>رؤية شاملة لأداء EduTunisia AI</h1>
+        </div>
+        <div class="top-actions">
+          <div class="segmented" role="group" aria-label="الفترة الزمنية">
+            <button class="active" data-period="week">أسبوع</button>
+            <button data-period="month">شهر</button>
+            <button data-period="quarter">ربع سنة</button>
+          </div>
+          <button class="primary-action" id="exportReport" data-go="/admin/analytics">تصدير التقرير</button>
+        </div>
+      </header>
+
+      <section class="hero glass">
+        <div class="hero-copy">
+          <span class="eyebrow">تحليلات مدعومة بالذكاء الاصطناعي</span>
+          <h2>قرارات أسرع، تعلم أذكى، ونمو يمكن قياسه بثقة.</h2>
+          <p>تابع أداء الطلبة، جودة المحتوى، فعالية التقييمات، ونشاط المرشد الذكي من مركز واحد مصمم للمديرين والمدرسين وصناع القرار.</p>
+          <div class="hero-metrics">
+            <div><strong>128K</strong><span>تفاعل تعليمي</span></div>
+            <div><strong>8.7</strong><span>متوسط الرضا</span></div>
+            <div><strong>31%</strong><span>تحسن متوقع</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orb-chart">
+            <span style="--v: 72%"></span>
+            <span style="--v: 88%"></span>
+            <span style="--v: 54%"></span>
+            <span style="--v: 96%"></span>
+            <span style="--v: 66%"></span>
+          </div>
+          <div class="floating-insight">AI Insight<br><strong>خطر الانقطاع انخفض 18%</strong></div>
+        </div>
+      </section>
+
+      <section class="kpi-grid" aria-label="مؤشرات الأداء الرئيسية">
+        <article class="kpi-card glass positive">
+          <span>معدل إكمال الدروس</span>
+          <strong>78.4%</strong>
+          <p>+12.6% مقارنة بالفترة السابقة</p>
+        </article>
+        <article class="kpi-card glass">
+          <span>الطلبة النشطون</span>
+          <strong>24,860</strong>
+          <p>4,220 طالب عادوا هذا الأسبوع</p>
+        </article>
+        <article class="kpi-card glass warning">
+          <span>متوسط نتيجة الاختبارات</span>
+          <strong>82.1%</strong>
+          <p>الرياضيات تحتاج مراجعة إضافية</p>
+        </article>
+        <article class="kpi-card glass positive">
+          <span>جلسات AI Tutor</span>
+          <strong>56,430</strong>
+          <p>92% من الإجابات مصنفة مفيدة</p>
+        </article>
+      </section>
+
+      <section class="analytics-grid">
+        <article class="panel glass span-2">
+          <div class="panel-head">
+            <div>
+              <span>أداء الطلبة</span>
+              <h3>منحنى التقدم حسب المرحلة</h3>
+            </div>
+            <button class="ghost-button" data-refresh="performance">تحديث</button>
+          </div>
+          <div class="line-chart" aria-label="رسم بياني لتقدم الطلبة">
+            <svg viewBox="0 0 720 260" role="img">
+              <defs>
+                <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#2dd4ff" />
+                  <stop offset="0.55" stop-color="#5d6bff" />
+                  <stop offset="1" stop-color="#a855f7" />
+                </linearGradient>
+                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#7c3aed" stop-opacity=".32" />
+                  <stop offset="1" stop-color="#2dd4ff" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="grid-line" d="M40 50H690M40 105H690M40 160H690M40 215H690" />
+              <path class="area" d="M45 198 C120 170 150 140 205 150 C275 164 300 86 365 96 C455 110 485 42 565 58 C625 70 655 36 690 52 L690 230 L45 230 Z" />
+              <path class="line" d="M45 198 C120 170 150 140 205 150 C275 164 300 86 365 96 C455 110 485 42 565 58 C625 70 655 36 690 52" />
+              <g class="points">
+                <circle cx="45" cy="198" r="6" />
+                <circle cx="205" cy="150" r="6" />
+                <circle cx="365" cy="96" r="6" />
+                <circle cx="565" cy="58" r="6" />
+                <circle cx="690" cy="52" r="6" />
+              </g>
+            </svg>
+          </div>
+          <div class="chart-legend">
+            <span><i class="dot cyan"></i> ابتدائي</span>
+            <span><i class="dot blue"></i> إعدادي</span>
+            <span><i class="dot purple"></i> ثانوي</span>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>التفاعل</span>
+              <h3>نشاط المنصة اليومي</h3>
+            </div>
+          </div>
+          <div class="bar-chart" aria-label="تحليلات التفاعل">
+            <div style="--h: 46%"><span>س</span></div>
+            <div style="--h: 61%"><span>ح</span></div>
+            <div style="--h: 72%"><span>ث</span></div>
+            <div style="--h: 54%"><span>ر</span></div>
+            <div style="--h: 88%"><span>خ</span></div>
+            <div style="--h: 96%"><span>ج</span></div>
+            <div style="--h: 64%"><span>س</span></div>
+          </div>
+          <div class="mini-note">أعلى كثافة نشاط بين 18:00 و 21:00.</div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>المحتوى</span>
+              <h3>جودة الدروس والدورات</h3>
+            </div>
+          </div>
+          <div class="content-metrics">
+            <div class="ring" style="--p: 84%"><strong>84%</strong><span>جودة المحتوى</span></div>
+            <ul>
+              <li><span>دروس منشورة</span><strong>1,284</strong></li>
+              <li><span>تحديثات AI</span><strong>396</strong></li>
+              <li><span>موارد محملة</span><strong>8,930</strong></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>التقييمات</span>
+              <h3>تحليل الاختبارات والتمارين</h3>
+            </div>
+          </div>
+          <div class="stack-list">
+            <div>
+              <span>رياضيات</span>
+              <b style="--w: 71%">71%</b>
+            </div>
+            <div>
+              <span>علوم</span>
+              <b style="--w: 84%">84%</b>
+            </div>
+            <div>
+              <span>عربية</span>
+              <b style="--w: 89%">89%</b>
+            </div>
+            <div>
+              <span>فرنسية</span>
+              <b style="--w: 76%">76%</b>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass">
+          <div class="panel-head">
+            <div>
+              <span>AI Tutor</span>
+              <h3>أداء المرشد الذكي</h3>
+            </div>
+          </div>
+          <div class="ai-matrix">
+            <div><strong>1.8s</strong><span>زمن الاستجابة</span></div>
+            <div><strong>93%</strong><span>دقة الإجابات</span></div>
+            <div><strong>41K</strong><span>أسئلة محلولة</span></div>
+            <div><strong>8.9</strong><span>رضا الطلبة</span></div>
+          </div>
+        </article>
+
+        <article class="panel glass span-2">
+          <div class="panel-head">
+            <div>
+              <span>التنبؤات</span>
+              <h3>مخاطر الانقطاع وفرص التحسن</h3>
+            </div>
+            <button class="ghost-button" data-go="/admin/analytics">عرض النماذج</button>
+          </div>
+          <div class="predictive-grid">
+            <div class="forecast-card high">
+              <span>طلبة بحاجة لتدخل</span>
+              <strong>312</strong>
+              <p>خطر متوسط إلى عال خلال 14 يوم.</p>
+            </div>
+            <div class="forecast-card">
+              <span>تحسن متوقع</span>
+              <strong>31%</strong>
+              <p>عند تطبيق خطة مراجعة الرياضيات.</p>
+            </div>
+            <div class="forecast-card">
+              <span>دروس مقترحة</span>
+              <strong>48</strong>
+              <p>مولدة من فجوات الأداء الحالية.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="lower-grid">
+        <article class="panel glass insights-panel">
+          <div class="panel-head">
+            <div>
+              <span>لوحة الرؤى الذكية</span>
+              <h3>توصيات قابلة للتنفيذ</h3>
+            </div>
+          </div>
+          <div class="insight-list">
+            <div class="insight-item critical">
+              <b>أولوية عالية</b>
+              <p>أداء السنة الثالثة ثانوي في الدوال انخفض 9% بعد الاختبار الأخير.</p>
+              <button data-action="insight" data-go="/teacher/ai-content-studio">إنشاء خطة تدخل</button>
+            </div>
+            <div class="insight-item">
+              <b>فرصة نمو</b>
+              <p>الدروس التي تتضمن أسئلة تفاعلية تحقق بقاء أعلى بـ 22%.</p>
+              <button data-action="insight" data-go="/teacher/question-bank">توليد أسئلة</button>
+            </div>
+            <div class="insight-item">
+              <b>تحسين المحتوى</b>
+              <p>6 فيديوهات تجاوزت معدل إعادة مشاهدة مرتفع وتحتاج تبسيطا.</p>
+              <button data-action="insight" data-go="/teacher/lessons">فتح المراجعة</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel glass leaderboard">
+          <div class="panel-head">
+            <div>
+              <span>لوحات الصدارة</span>
+              <h3>أفضل الأداء هذا الشهر</h3>
+            </div>
+          </div>
+          <ol>
+            <li><span>1</span><div><b>معهد المنارات</b><small>96% إكمال</small></div><strong>18,420 XP</strong></li>
+            <li><span>2</span><div><b>أكاديمية قرطاج</b><small>92% نشاط</small></div><strong>16,880 XP</strong></li>
+            <li><span>3</span><div><b>مدرسة المستقبل</b><small>88% تحسن</small></div><strong>15,210 XP</strong></li>
+            <li><span>4</span><div><b>نخبة العلوم</b><small>84% اختبارات</small></div><strong>13,940 XP</strong></li>
+          </ol>
+        </article>
+
+        <article class="panel glass export-center">
+          <div class="panel-head">
+            <div>
+              <span>مركز التصدير</span>
+              <h3>تقارير جاهزة للمشاركة</h3>
+            </div>
+          </div>
+          <div class="export-options">
+            <button data-export="pdf" data-go="/admin/analytics">تقرير تنفيذي PDF</button>
+            <button data-export="xlsx" data-go="/admin/analytics">بيانات Excel</button>
+            <button data-export="slides" data-go="/teacher/ai-content-studio">عرض تقديمي</button>
+            <button data-export="api" data-go="/admin/analytics">مزامنة API</button>
+          </div>
+        </article>
+
+        <article class="panel glass heatmap-panel">
+          <div class="panel-head">
+            <div>
+              <span>خريطة النشاط</span>
+              <h3>كثافة التعلم حسب الساعة</h3>
+            </div>
+          </div>
+          <div class="heatmap" aria-label="خريطة حرارة لنشاط الطلبة">
+            <span class="l1"></span><span class="l3"></span><span class="l4"></span><span class="l2"></span><span class="l5"></span>
+            <span class="l2"></span><span class="l4"></span><span class="l5"></span><span class="l3"></span><span class="l1"></span>
+            <span class="l3"></span><span class="l5"></span><span class="l4"></span><span class="l5"></span><span class="l2"></span>
+            <span class="l1"></span><span class="l2"></span><span class="l3"></span><span class="l4"></span><span class="l5"></span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">تم تجهيز التقرير بنجاح</div>
+  <script src="analytics-dashboard.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

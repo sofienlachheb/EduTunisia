@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إنشاء حساب EduTunisia AI عبر معالج تسجيل ذكي متعدد الخطوات للتلاميذ، المدرسين، والأولياء.">
+  <title>إنشاء حساب | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <main class="register-shell">
+    <section class="visual-panel" aria-label="EduTunisia AI">
+      <a class="brand" href="/" data-route="/" aria-label="العودة للصفحة الرئيسية">
+        <span class="brand-mark">E</span>
+        <span>EduTunisia <strong>AI</strong></span>
+      </a>
+      <div class="visual-copy">
+        <p class="eyebrow">تسجيل ذكي في دقائق</p>
+        <h1>ابدأ رحلة تعلم مصممة حسب دورك وهدفك</h1>
+        <p>اختر الحساب المناسب، أضف بياناتك، ثم احصل على مساحة تعليمية جاهزة للتلميذ، المدرس، أو الولي.</p>
+      </div>
+      <div class="illustration-card">
+        <img src="assets/edutunisia-register-illustration.png" alt="رسم حديث يوضح تلميذا ومدرسا ووليا داخل منصة تعلم ذكية">
+      </div>
+      <div class="trust-strip" aria-label="مزايا الثقة">
+        <span>حماية بيانات</span>
+        <span>منهج تونسي</span>
+        <span>مرافقة AI</span>
+      </div>
+    </section>
+
+    <section class="wizard-panel" aria-label="معالج إنشاء الحساب">
+      <div class="wizard-card">
+        <div class="wizard-head">
+          <div>
+            <p class="eyebrow">إنشاء حساب</p>
+            <h2>مرحبا بك في EduTunisia AI</h2>
+          </div>
+          <a class="login-link" href="login.html">لديك حساب؟</a>
+        </div>
+
+        <div class="progress-wrap" aria-label="تقدم التسجيل">
+          <div class="progress-label">
+            <span data-current-step>الخطوة 1 من 4</span>
+            <strong data-step-title>اختيار الدور</strong>
+          </div>
+          <div class="progress-bar" aria-hidden="true">
+            <span data-progress-fill></span>
+          </div>
+          <ol class="steps">
+            <li class="active" data-step-dot="1"><span>1</span>الدور</li>
+            <li data-step-dot="2"><span>2</span>المعلومات</li>
+            <li data-step-dot="3"><span>3</span>الحساب</li>
+            <li data-step-dot="4"><span>4</span>التفاصيل</li>
+          </ol>
+        </div>
+
+        <form id="registerForm" novalidate>
+          <section class="form-step active" data-step="1" aria-label="اختيار الدور">
+            <div class="step-heading">
+              <h3>من أنت داخل المنصة؟</h3>
+              <p>سنخصص الحقول والتجربة حسب الدور الذي تختاره.</p>
+            </div>
+            <div class="role-grid" role="radiogroup" aria-label="اختيار الدور">
+              <label class="role-card selected">
+                <input type="radio" name="role" value="student" checked>
+                <span class="role-icon">🎓</span>
+                <strong>تلميذ</strong>
+                <small>دروس، تمارين، وأستاذ ذكي يرافقك يوميا.</small>
+              </label>
+              <label class="role-card">
+                <input type="radio" name="role" value="teacher">
+                <span class="role-icon">📘</span>
+                <strong>مدرس</strong>
+                <small>إدارة مجموعات، واجبات، وتحليلات مستوى.</small>
+              </label>
+              <label class="role-card">
+                <input type="radio" name="role" value="parent">
+                <span class="role-icon">🤝</span>
+                <strong>ولي</strong>
+                <small>متابعة تقدم الأبناء وتنبيهات أسبوعية واضحة.</small>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="2" aria-label="المعلومات الشخصية">
+            <div class="step-heading">
+              <h3>المعلومات الشخصية</h3>
+              <p>اكتب بيانات صحيحة حتى نجهز حسابك ونخصص التجربة.</p>
+            </div>
+            <div class="field-grid">
+              <label class="field">
+                <span>الاسم</span>
+                <input type="text" name="firstName" autocomplete="given-name" placeholder="مثال: أحمد" required minlength="2">
+                <small class="error">الاسم يجب أن يحتوي على حرفين على الأقل.</small>
+              </label>
+              <label class="field">
+                <span>اللقب</span>
+                <input type="text" name="lastName" autocomplete="family-name" placeholder="مثال: بن سالم" required minlength="2">
+                <small class="error">اللقب يجب أن يحتوي على حرفين على الأقل.</small>
+              </label>
+              <label class="field">
+                <span>رقم الهاتف</span>
+                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="مثال: 22123456" required pattern="^[0-9+\\s-]{8,16}$">
+                <small class="error">أدخل رقم هاتف صحيح.</small>
+              </label>
+              <label class="field">
+                <span>المدينة</span>
+                <select name="city" required>
+                  <option value="">اختر المدينة</option>
+                  <option>تونس</option>
+                  <option>أريانة</option>
+                  <option>سوسة</option>
+                  <option>صفاقس</option>
+                  <option>نابل</option>
+                  <option>قابس</option>
+                  <option>قفصة</option>
+                </select>
+                <small class="error">اختر المدينة.</small>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-step" data-step="3" aria-label="إعداد الحساب">
+            <div class="step-heading">
+              <h3>إعداد الحساب</h3>
+              <p>استخدم بريدا فعالا وكلمة مرور قوية لحماية حسابك.</p>
+            </div>
+            <div class="field-grid">
+              <label class="field full">
+                <span>البريد الإلكتروني</span>
+                <input type="email" name="email" autocomplete="email" placeholder="name@email.com" required>
+                <small class="error">أدخل بريدا إلكترونيا صحيحا.</small>
+              </label>
+              <label class="field">
+                <span>كلمة المرور</span>
+                <input type="password" name="password" autocomplete="new-password" placeholder="8 أحرف على الأقل" required minlength="8" data-password>
+                <small class="error">كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل.</small>
+              </label>
+              <label class="field">
+                <span>تأكيد كلمة المرور</span>
+                <input type="password" name="confirmPassword" autocomplete="new-password" placeholder="أعد كتابة كلمة المرور" required data-confirm-password>
+                <small class="error">كلمتا المرور غير متطابقتين.</small>
+              </label>
+            </div>
+            <div class="strength-card" aria-live="polite">
+              <div class="strength-top">
+                <span>قوة كلمة المرور</span>
+                <strong data-strength-label>غير محددة</strong>
+              </div>
+              <div class="strength-meter" data-strength-meter><span></span></div>
+              <ul class="password-rules">
+                <li data-rule="length">8 أحرف على الأقل</li>
+                <li data-rule="case">حروف كبيرة وصغيرة</li>
+                <li data-rule="number">رقم واحد على الأقل</li>
+                <li data-rule="symbol">رمز خاص للحماية</li>
+              </ul>
+            </div>
+            <label class="terms">
+              <input type="checkbox" name="terms" required>
+              <span>أوافق على <a href="/" data-route="/">شروط الاستخدام</a> و<a href="/" data-route="/">سياسة الخصوصية</a>.</span>
+            </label>
+            <small class="error terms-error">يجب الموافقة على الشروط لإكمال التسجيل.</small>
+          </section>
+
+          <section class="form-step" data-step="4" aria-label="معلومات حسب الدور">
+            <div class="step-heading">
+              <h3>تفاصيل مخصصة</h3>
+              <p>آخر خطوة حتى نضبط المسار المناسب داخل EduTunisia AI.</p>
+            </div>
+
+            <div class="role-fields active" data-role-fields="student">
+              <div class="field-grid">
+                <label class="field">
+                  <span>المستوى الدراسي</span>
+                  <select name="studentLevel" data-role-required>
+                    <option value="">اختر المستوى</option>
+                    <option>سنة سادسة ابتدائي</option>
+                    <option>سنة تاسعة أساسي</option>
+                    <option>ثانية ثانوي</option>
+                    <option>بكالوريا</option>
+                  </select>
+                  <small class="error">اختر المستوى الدراسي.</small>
+                </label>
+                <label class="field">
+                  <span>المادة التي تحتاج دعما</span>
+                  <select name="studentSubject" data-role-required>
+                    <option value="">اختر المادة</option>
+                    <option>رياضيات</option>
+                    <option>فيزياء</option>
+                    <option>علوم</option>
+                    <option>لغات</option>
+                  </select>
+                  <small class="error">اختر المادة.</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="role-fields" data-role-fields="teacher">
+              <div class="field-grid">
+                <label class="field">
+                  <span>المادة التي تدرسها</span>
+                  <input type="text" name="teacherSubject" placeholder="مثال: رياضيات" data-role-required>
+                  <small class="error">أدخل المادة.</small>
+                </label>
+                <label class="field">
+                  <span>نوع المؤسسة</span>
+                  <select name="teacherInstitution" data-role-required>
+                    <option value="">اختر النوع</option>
+                    <option>مدرسة عمومية</option>
+                    <option>مدرسة خاصة</option>
+                    <option>مركز دعم</option>
+                    <option>مدرس مستقل</option>
+                  </select>
+                  <small class="error">اختر نوع المؤسسة.</small>
+                </label>
+              </div>
+            </div>
+
+            <div class="role-fields" data-role-fields="parent">
+              <div class="field-grid">
+                <label class="field">
+                  <span>عدد الأبناء</span>
+                  <input type="number" name="childrenCount" min="1" max="8" placeholder="مثال: 2" data-role-required>
+                  <small class="error">أدخل عدد الأبناء.</small>
+                </label>
+                <label class="field">
+                  <span>أهم هدف</span>
+                  <select name="parentGoal" data-role-required>
+                    <option value="">اختر الهدف</option>
+                    <option>متابعة يومية</option>
+                    <option>تحضير فروض</option>
+                    <option>تحضير بكالوريا</option>
+                    <option>تقوية الضعف</option>
+                  </select>
+                  <small class="error">اختر الهدف.</small>
+                </label>
+              </div>
+            </div>
+
+            <label class="field full">
+              <span>ملاحظة اختيارية</span>
+              <textarea name="notes" rows="4" placeholder="أخبرنا بما تريد تحسينه أو متابعته..."></textarea>
+            </label>
+          </section>
+
+          <section class="success-screen" data-success-screen aria-label="نجاح التسجيل">
+            <div class="success-icon">✓</div>
+            <h3>تم إنشاء الحساب بنجاح</h3>
+            <p>تم إنشاء الحساب بنجاح. يمكنك الآن تسجيل الدخول واختيار دور الحساب للوصول إلى لوحة البداية المناسبة.</p>
+            <a class="button primary" href="login.html">الانتقال إلى تسجيل الدخول</a>
+          </section>
+
+          <div class="wizard-actions" data-actions>
+            <button class="button ghost" type="button" data-prev disabled>السابق</button>
+            <button class="button primary" type="button" data-next>التالي</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="register.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+

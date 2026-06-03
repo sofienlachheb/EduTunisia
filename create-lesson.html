@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إنشاء وتحرير درس في EduTunisia AI مع محرر محتوى، أهداف تعلم، وسائط، اختبارات، أدوات AI وإعدادات نشر.">
+  <title>إنشاء درس | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="create-lesson.css">
+</head>
+<body data-protected-role="teacher">
+  <div class="lesson-shell">
+    <header class="lesson-header glass">
+      <div class="brand-row">
+        <a class="brand" href="/teacher/lessons/" data-route="/teacher/lessons" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">Lesson Authoring Studio</p>
+          <h1>إنشاء وتحرير درس</h1>
+          <p>صمم درسا كاملا من الأهداف إلى النشر مع محرر متقدم، وسائط، اختبارات، ومساعد AI تعليمي.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-save>حفظ مسودة</button>
+        <button class="button primary" type="button" data-open-publish>جاهز للنشر</button>
+      </div>
+    </header>
+
+    <nav class="step-tabs glass" aria-label="خطوات إنشاء الدرس">
+      <button class="active" type="button" data-tab="basic"><span>01</span>المعلومات</button>
+      <button type="button" data-tab="content"><span>02</span>المحتوى</button>
+      <button type="button" data-tab="media"><span>03</span>الوسائط</button>
+      <button type="button" data-tab="assessments"><span>04</span>التقييمات</button>
+      <button type="button" data-tab="ai"><span>05</span>AI Assistant</button>
+      <button type="button" data-tab="publishing"><span>06</span>النشر</button>
+    </nav>
+
+    <main class="author-layout">
+      <section class="author-main">
+        <section class="tab-panel active glass" data-panel="basic">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Basic Information</p>
+              <h2>هوية الدرس</h2>
+            </div>
+            <span class="completion-pill">78% مكتمل</span>
+          </div>
+
+          <div class="form-grid">
+            <label class="field full">
+              <span>عنوان الدرس</span>
+              <input type="text" value="مفهوم المشتقة وتفسيرها الهندسي" data-title-input>
+            </label>
+            <label class="field">
+              <span>الوحدة</span>
+              <select>
+                <option>أساسيات الاشتقاق</option>
+                <option>تطبيقات في الدوال</option>
+                <option>محاكاة الامتحان</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>نوع الدرس</span>
+              <select data-type-input>
+                <option>فيديو تفاعلي</option>
+                <option>درس نصي</option>
+                <option>اختبار قصير</option>
+                <option>واجب تطبيقي</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>المدة المقدرة</span>
+              <input type="text" value="12 دقيقة">
+            </label>
+            <label class="field">
+              <span>الصعوبة</span>
+              <select>
+                <option>متوسطة</option>
+                <option>سهلة</option>
+                <option>متقدمة</option>
+              </select>
+            </label>
+          </div>
+
+          <section class="objectives-card">
+            <div class="mini-head">
+              <div>
+                <p class="eyebrow">Learning Objectives</p>
+                <h3>أهداف التعلم</h3>
+              </div>
+              <button class="button soft" type="button" data-add-objective>إضافة هدف</button>
+            </div>
+            <div class="objectives-list" data-objectives-list>
+              <label><input type="checkbox" checked> يفهم التلميذ معنى المشتقة كسرعة تغير.</label>
+              <label><input type="checkbox" checked> يربط بين المشتقة وميل المماس بيانيا.</label>
+              <label><input type="checkbox"> يطبق المفهوم على مثال بكالوريا قصير.</label>
+            </div>
+          </section>
+        </section>
+
+        <section class="tab-panel glass" data-panel="content">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Content Editor</p>
+              <h2>محرر المحتوى</h2>
+            </div>
+            <button class="button soft" type="button" data-improve-content>تحسين بالذكاء الاصطناعي</button>
+          </div>
+
+          <div class="rich-editor">
+            <div class="editor-toolbar" aria-label="أدوات تحرير المحتوى">
+              <button type="button"><b>B</b></button>
+              <button type="button"><i>I</i></button>
+              <button type="button">H2</button>
+              <button type="button">•</button>
+              <button type="button">∑</button>
+              <button type="button">↗</button>
+            </div>
+            <div class="editor-area" contenteditable="true" data-lesson-content>
+              <h2>مدخل إلى مفهوم المشتقة</h2>
+              <p>نبدأ من فكرة بسيطة: عندما تتغير دالة، يمكننا قياس سرعة هذا التغير في نقطة معينة. المشتقة تساعدنا على فهم هذه السرعة وربطها بميل المماس.</p>
+              <p>في هذا الدرس سنحل مثالا بيانيا ثم ننتقل إلى تمرين تطبيقي قريب من أسئلة البكالوريا.</p>
+            </div>
+          </div>
+
+          <div class="content-blocks">
+            <article><span>01</span><strong>فقرة شرح</strong><small>جاهزة</small></article>
+            <article><span>02</span><strong>مثال تفاعلي</strong><small>يحتاج تمرين</small></article>
+            <article><span>03</span><strong>ملخص سريع</strong><small>AI مقترح</small></article>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="media">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Media Assets</p>
+              <h2>الفيديو والملفات والصوت</h2>
+            </div>
+            <span class="completion-pill">3 وسائط</span>
+          </div>
+
+          <div class="media-grid">
+            <label class="upload-card video">
+              <input type="file" accept="video/*">
+              <strong>رفع فيديو الدرس</strong>
+              <span>MP4 · حتى 2GB · دعم الترجمة</span>
+            </label>
+            <label class="upload-card pdf">
+              <input type="file" accept="application/pdf" multiple>
+              <strong>PDF Attachments</strong>
+              <span>ملخص، ورقة عمل، أو إصلاح نموذجي</span>
+            </label>
+            <label class="upload-card audio">
+              <input type="file" accept="audio/*">
+              <strong>Audio Narration</strong>
+              <span>تعليق صوتي أو شرح مختصر</span>
+            </label>
+          </div>
+
+          <div class="asset-list">
+            <article><span>▶</span><div><strong>lesson-intro.mp4</strong><small>12:04 · جاهز للمعالجة</small></div><button type="button">استبدال</button></article>
+            <article><span>PDF</span><div><strong>ملخص المشتقة.pdf</strong><small>1.8MB · متاح للتلاميذ</small></div><button type="button">تحميل</button></article>
+            <article><span>♫</span><div><strong>تعليق صوتي قصير</strong><small>03:20 · اختياري</small></div><button type="button">تحرير</button></article>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="assessments">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Assessments</p>
+              <h2>الاختبارات والأنشطة</h2>
+            </div>
+            <button class="button primary" type="button" data-generate-quiz data-go="/teacher/question-bank">توليد اختبار</button>
+          </div>
+
+          <div class="generator-grid">
+            <article>
+              <span>Quiz</span>
+              <h3>Quiz Generator</h3>
+              <p>أسئلة اختيار من متعدد، صح/خطأ، وتمارين قصيرة حسب مستوى التلاميذ.</p>
+                <button type="button" data-generator="quiz" data-go="/teacher/question-bank">إنشاء Quiz</button>
+            </article>
+            <article>
+              <span>Worksheet</span>
+              <h3>Worksheet Generator</h3>
+              <p>ورقة عمل قابلة للطباعة مع تمارين متدرجة وإصلاح مختصر.</p>
+                <button type="button" data-generator="worksheet" data-go="/teacher/ai-content-studio">إنشاء Worksheet</button>
+            </article>
+            <article>
+              <span>Slides</span>
+              <h3>Presentation Generator</h3>
+              <p>عرض تقديمي للدرس مع مخطط، أمثلة، ومراجعة ختامية.</p>
+                <button type="button" data-generator="presentation" data-go="/teacher/ai-content-studio">إنشاء Presentation</button>
+            </article>
+          </div>
+
+          <div class="question-list" data-question-list>
+            <article><strong>سؤال 1</strong><p>ما معنى المشتقة بيانيا؟</p><span>اختيار من متعدد</span></article>
+            <article><strong>سؤال 2</strong><p>احسب مشتقة f(x)=x² عند x=3.</p><span>تمرين قصير</span></article>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="ai">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">AI Lesson Assistant</p>
+              <h2>مساعد الدرس الذكي</h2>
+            </div>
+            <span class="completion-pill">AI جاهز</span>
+          </div>
+
+          <section class="ai-assistant">
+            <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="مدرس يستعمل أدوات الذكاء الاصطناعي">
+            <div>
+              <h3>اطلب أي تحسين للدرس</h3>
+              <p>يمكن للمساعد اقتراح أمثلة تونسية، تبسيط الشرح، توليد أسئلة، أو تحويل الدرس إلى عرض تقديمي.</p>
+              <div class="ai-prompt">
+                <input type="text" placeholder="مثال: أبسط شرح المشتقة وأضف مثالين لبكالوريا" data-ai-prompt>
+            <button class="button primary" type="button" data-ai-run data-go="/teacher/ai-content-studio">تشغيل AI</button>
+              </div>
+            </div>
+          </section>
+
+          <div class="ai-output" data-ai-output>
+            <strong>اقتراح سريع</strong>
+            <p>أضف سؤالا تفاعليا بعد المثال الأول، ثم اربط مفهوم المشتقة بسرعة جسم متحرك حتى يصبح المعنى أقرب للتلميذ.</p>
+          </div>
+        </section>
+
+        <section class="tab-panel glass" data-panel="publishing">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Publishing</p>
+              <h2>إعدادات النشر</h2>
+            </div>
+            <span class="completion-pill">جاهز تقريبا</span>
+          </div>
+
+          <div class="publish-grid">
+            <label class="switch-row"><input type="checkbox" checked> نشر الدرس داخل الدورة</label>
+            <label class="switch-row"><input type="checkbox" checked> إرسال إشعار للتلاميذ</label>
+            <label class="switch-row"><input type="checkbox"> جدولة النشر لاحقا</label>
+            <label class="switch-row"><input type="checkbox" checked> تفعيل التعليقات والأسئلة</label>
+            <label class="switch-row"><input type="checkbox" checked> إظهار الملفات المرفقة</label>
+            <label class="switch-row"><input type="checkbox"> جعله درسا مجانيا للمعاينة</label>
+          </div>
+
+          <div class="publish-checklist">
+            <h3>قائمة جاهزية الدرس</h3>
+            <ul>
+              <li class="done">العنوان والأهداف مكتملة</li>
+              <li class="done">المحتوى الأساسي موجود</li>
+              <li class="done">الفيديو والملفات مرفوعة</li>
+              <li>إضافة اختبار ختامي موصى بها</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <aside class="preview-sidebar">
+        <section class="preview-card glass">
+          <p class="eyebrow">Lesson Preview</p>
+          <div class="preview-hero">
+            <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="معاينة درس تعليمي">
+            <span>فيديو</span>
+          </div>
+          <div class="preview-body">
+            <span class="status">أساسيات الاشتقاق</span>
+            <h2 data-preview-title>مفهوم المشتقة وتفسيرها الهندسي</h2>
+            <p data-preview-content>نبدأ من فكرة بسيطة: عندما تتغير دالة، يمكننا قياس سرعة هذا التغير في نقطة معينة.</p>
+            <div class="preview-stats">
+              <span>12 دقيقة</span>
+              <span>3 أهداف</span>
+              <span>2 أسئلة</span>
+            </div>
+            <button class="button primary" type="button" data-go="/student/lessons/lesson-1">معاينة كتلميذ</button>
+          </div>
+        </section>
+
+        <section class="score-card glass">
+          <div class="score-ring"><strong>88%</strong><small>جودة</small></div>
+          <ul>
+            <li><span></span>شرح واضح ومناسب للمستوى</li>
+            <li><span></span>وسائط متعددة تدعم الفهم</li>
+            <li><span></span>يحتاج اختبارا ختاميا أقوى</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+  <section class="modal glass" data-publish-modal role="dialog" aria-modal="true" aria-labelledby="publishTitle" hidden>
+    <div class="modal-head">
+      <h2 id="publishTitle">تأكيد نشر الدرس</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>سيتم نشر الدرس داخل الدورة وإرسال إشعار للتلاميذ حسب الإعدادات المحددة.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>إلغاء</button>
+      <button class="button primary" type="button" data-confirm-publish>نشر الآن</button>
+    </div>
+  </section>
+  <div class="toast" data-toast>تم الحفظ</div>
+
+  <script src="create-lesson.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

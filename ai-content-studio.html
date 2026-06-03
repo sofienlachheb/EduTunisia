@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Content Studio من EduTunisia AI لإنشاء الدروس، الدورات، الاختبارات، الامتحانات، أوراق العمل، العروض والخرائط الذهنية.">
+  <title>AI Content Studio | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ai-content-studio.css">
+</head>
+<body data-protected-role="teacher,admin">
+  <div class="studio-shell">
+    <header class="studio-header glass">
+      <div class="brand-row">
+      <a class="brand" href="/teacher/dashboard/" data-route="/teacher/dashboard" aria-label="EduTunisia AI">
+          <span class="brand-mark">E</span>
+          <span>EduTunisia <strong>AI</strong></span>
+        </a>
+        <div>
+          <p class="eyebrow">AI Content Studio</p>
+          <h1>استوديو إنشاء المحتوى الذكي</h1>
+          <p>مساحة AI-first للمدرسين: حوّل فكرة أو ملفا إلى درس، اختبار، عرض، ورقة عمل أو خريطة ذهنية جاهزة للمراجعة.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="button soft" type="button" data-open-history>السجل</button>
+        <button class="button primary" type="button" data-run-ai>توليد المحتوى</button>
+      </div>
+    </header>
+
+    <section class="hero-console glass">
+      <div class="hero-copy">
+        <p class="eyebrow">Inspired by ChatGPT · Canva · Notion AI</p>
+        <h2>اكتب ما تريد تدريسه، ودع EduTunisia AI يبني المسار التعليمي</h2>
+        <p>اختر أداة، أضف سياقا أو ملفات، اضبط الجمهور والصعوبة، ثم راجع الناتج داخل محرر احترافي قابل للتصدير والتعاون.</p>
+        <div class="hero-badges">
+          <span>مطابق للمنهج التونسي</span>
+          <span>قابل للتصدير</span>
+          <span>تعاون مباشر</span>
+        </div>
+      </div>
+      <img src="assets/edutunisia-teacher-dashboard-illustration.png" alt="مدرس ينشئ محتوى تعليمي بمساعدة الذكاء الاصطناعي">
+    </section>
+
+    <main class="studio-grid">
+      <aside class="tools-panel glass" aria-label="أدوات الذكاء الاصطناعي">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">AI Tools</p>
+            <h2>لوحة الأدوات</h2>
+          </div>
+        </div>
+        <div class="tool-grid" data-tool-grid>
+          <button class="active" type="button" data-tool="lesson"><span>01</span><strong>Lesson Builder</strong><small>درس كامل</small></button>
+          <button type="button" data-tool="course"><span>02</span><strong>Course Builder</strong><small>خطة دورة</small></button>
+          <button type="button" data-tool="quiz"><span>03</span><strong>Quiz Generator</strong><small>اختبار قصير</small></button>
+          <button type="button" data-tool="exam"><span>04</span><strong>Exam Generator</strong><small>امتحان شامل</small></button>
+          <button type="button" data-tool="worksheet"><span>05</span><strong>Worksheet</strong><small>ورقة عمل</small></button>
+          <button type="button" data-tool="presentation"><span>06</span><strong>Presentation</strong><small>عرض تقديمي</small></button>
+          <button type="button" data-tool="mindmap"><span>07</span><strong>Mind Map</strong><small>خريطة ذهنية</small></button>
+        </div>
+      </aside>
+
+      <section class="workspace-panel">
+        <section class="prompt-card glass">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Prompt Builder</p>
+              <h2 data-active-tool-title>Lesson Builder</h2>
+            </div>
+            <span class="mode-pill" data-mode-pill>درس كامل</span>
+          </div>
+
+          <div class="prompt-grid">
+            <label class="field full">
+              <span>ما المحتوى الذي تريد إنشاءه؟</span>
+              <textarea rows="5" data-main-prompt placeholder="مثال: أنشئ درسا حول التفسير الهندسي للمشتقة لتلاميذ البكالوريا مع مثالين وتمرين ختامي.">أنشئ درسا حول التفسير الهندسي للمشتقة لتلاميذ البكالوريا مع مثالين وتمرين ختامي.</textarea>
+            </label>
+            <label class="field">
+              <span>المادة</span>
+              <select data-subject>
+                <option>رياضيات</option>
+                <option>فيزياء</option>
+                <option>علوم</option>
+                <option>عربية</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>المستوى</span>
+              <select data-level>
+                <option>بكالوريا</option>
+                <option>ثانوي</option>
+                <option>إعدادي</option>
+                <option>ابتدائي</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>الصعوبة</span>
+              <select data-difficulty>
+                <option>متوسطة</option>
+                <option>سهلة</option>
+                <option>متقدمة</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>أسلوب الإخراج</span>
+              <select data-output-style>
+                <option>شرح منظم مع أمثلة</option>
+                <option>نقاط Notion مختصرة</option>
+                <option>عرض بصري</option>
+                <option>تقييم تفاعلي</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="prompt-actions">
+            <button class="button soft" type="button" data-enhance-prompt>تحسين البرومبت</button>
+            <button class="button primary" type="button" data-run-ai>توليد المحتوى</button>
+          </div>
+        </section>
+
+        <section class="upload-editor-grid">
+          <section class="upload-zone glass">
+            <p class="eyebrow">File Upload Zone</p>
+            <h2>أضف ملفات مرجعية</h2>
+            <label class="dropzone">
+              <input type="file" multiple>
+              <strong>اسحب ملفاتك هنا أو اخترها</strong>
+              <span>PDF، صور، ملخصات، مواضيع امتحانات أو عروض</span>
+            </label>
+            <div class="file-list">
+              <article><span>PDF</span><div><strong>ملخص الاشتقاق.pdf</strong><small>تم التحليل</small></div></article>
+              <article><span>IMG</span><div><strong>رسم بياني للدالة.png</strong><small>جاهز للاستخدام</small></div></article>
+            </div>
+          </section>
+
+          <section class="editor-card glass">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Content Editor</p>
+                <h2>المحرر الذكي</h2>
+              </div>
+              <button class="button soft" type="button" data-copy-output>نسخ</button>
+            </div>
+            <div class="editor-toolbar">
+              <button type="button">B</button>
+              <button type="button">I</button>
+              <button type="button">H2</button>
+              <button type="button">•</button>
+              <button type="button">∑</button>
+              <button type="button">↗</button>
+            </div>
+            <div class="content-editor" contenteditable="true" data-content-editor>
+              <h3>مسودة درس: التفسير الهندسي للمشتقة</h3>
+              <p>هدف الدرس: أن يفهم التلميذ أن المشتقة في نقطة تمثل ميل المماس للمنحنى في تلك النقطة.</p>
+              <ul>
+                <li>تمهيد سريع حول معدل التغير.</li>
+                <li>شرح بصري لفكرة المماس.</li>
+                <li>مثال بكالوريا قصير مع خطوات الحل.</li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <aside class="right-panel">
+        <section class="export-card glass">
+          <p class="eyebrow">Export Center</p>
+          <h2>تصدير المحتوى</h2>
+          <div class="export-grid">
+            <button type="button" data-go="/courses/course-1/preview">PDF</button>
+            <button type="button" data-go="/teacher/lessons/create">DOCX</button>
+            <button type="button" data-go="/teacher/lessons/create">Slides</button>
+            <button type="button" data-go="/teacher/question-bank">Quiz</button>
+            <button type="button" data-go="/teacher/dashboard">Notion</button>
+            <button type="button" data-go="/teacher/courses">LMS</button>
+          </div>
+        </section>
+
+        <section class="history-card glass" data-history-panel>
+          <p class="eyebrow">History Panel</p>
+          <h2>آخر الإنشاءات</h2>
+          <ol data-history-list>
+            <li><strong>درس الاشتقاق</strong><span>منذ 8 دقائق</span></li>
+            <li><strong>اختبار النهايات</strong><span>اليوم 10:30</span></li>
+            <li><strong>عرض الدوال</strong><span>أمس</span></li>
+          </ol>
+        </section>
+
+        <section class="collab-card glass">
+          <p class="eyebrow">Collaboration</p>
+          <h2>التعاون</h2>
+          <div class="avatars">
+            <span>م</span>
+            <span>أ</span>
+            <span>س</span>
+          </div>
+          <label><input type="checkbox" checked> السماح بتعليقات الفريق</label>
+          <label><input type="checkbox"> مشاركة مع مدرسين آخرين</label>
+          <button class="button primary" type="button" data-go="/teacher/dashboard">دعوة متعاون</button>
+        </section>
+
+        <section class="insights-card glass">
+          <p class="eyebrow">AI Insights</p>
+          <h2>رؤى ذكية</h2>
+          <ul>
+            <li>أضف تمرينا تشخيصيا قبل الشرح.</li>
+            <li>الدرس مناسب لبكالوريا علوم بنسبة 92%.</li>
+            <li>يمكن تحويله إلى عرض من 7 شرائح.</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="toast" data-toast>تم توليد المحتوى</div>
+  <script src="ai-content-studio.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+

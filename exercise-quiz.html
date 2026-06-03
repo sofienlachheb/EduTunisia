@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="اختبار وتمارين EduTunisia AI بتجربة تفاعلية، مؤقت، تحليل AI، توصيات ونقاط XP.">
+  <title>التمارين والاختبار | EduTunisia AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="exercise-quiz.css">
+</head>
+<body data-protected-role="student,teacher">
+  <main class="quiz-shell">
+    <header class="topbar glass">
+      <a class="brand" href="/courses/course-1/" data-route="/courses/course-1" aria-label="EduTunisia AI">
+        <span class="brand-mark">E</span>
+        <span>EduTunisia <strong>AI</strong></span>
+      </a>
+      <div>
+        <p class="eyebrow">Exercise & Quiz</p>
+        <h1>اختبار الاشتقاق السريع</h1>
+      </div>
+      <div class="xp-pill"><span>⚡</span><strong data-xp>120 XP</strong></div>
+    </header>
+
+    <section class="start-screen glass active" data-start-screen>
+      <div class="start-copy">
+        <p class="eyebrow">استعد للتحدي</p>
+        <h2>اختبر فهمك لمفهوم المشتقة في 5 أسئلة ذكية</h2>
+        <p>الأسئلة تتضمن اختيارا من متعدد، صح أو خطأ، وإجابة قصيرة. بعد النهاية ستحصل على تحليل AI وتوصيات مراجعة شخصية.</p>
+        <div class="start-stats">
+          <span>5 أسئلة</span>
+          <span>08 دقائق</span>
+          <span>+120 XP</span>
+        </div>
+        <button class="button primary" type="button" data-start>ابدأ الاختبار</button>
+      </div>
+      <img src="assets/edutunisia-dashboard-illustration.png" alt="تلميذ يراجع مع أستاذ ذكي ولوحات تقدم">
+    </section>
+
+    <section class="quiz-layout" data-quiz-screen hidden>
+      <aside class="quiz-sidebar glass">
+        <div class="timer-widget">
+          <p class="eyebrow">Timer</p>
+          <strong data-timer>08:00</strong>
+          <div class="timer-ring"><span></span></div>
+        </div>
+        <div class="progress-widget">
+          <div class="panel-head">
+            <h2>التقدم</h2>
+            <span data-progress-label>1 / 5</span>
+          </div>
+          <div class="progress-line"><span data-progress-bar></span></div>
+        </div>
+        <nav class="question-nav" aria-label="ملاحة الأسئلة" data-question-nav></nav>
+      </aside>
+
+      <section class="question-zone glass">
+        <div class="question-top">
+          <div>
+            <p class="eyebrow" data-question-type>اختيار من متعدد</p>
+            <h2 data-question-title>السؤال الأول</h2>
+          </div>
+          <span class="difficulty" data-difficulty>متوسط</span>
+        </div>
+
+        <article class="question-card" data-question-card></article>
+
+        <div class="quiz-actions">
+          <button class="button soft" type="button" data-prev disabled>السابق</button>
+          <button class="button soft" type="button" data-next>التالي</button>
+          <button class="button primary" type="button" data-open-submit>إنهاء الاختبار</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="result-screen glass" data-result-screen hidden>
+      <div class="result-hero">
+        <div class="score-circle"><strong data-score>0%</strong><small>النتيجة</small></div>
+        <div>
+          <p class="eyebrow">Result</p>
+          <h2 data-result-title>عمل ممتاز</h2>
+          <p data-result-summary>تحليل أدائك سيظهر هنا بعد إنهاء الاختبار.</p>
+          <div class="reward-row">
+            <span>+120 XP</span>
+            <span>شارة التركيز</span>
+            <span>سلسلة 4 أيام</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysis-grid">
+        <section class="analysis-card">
+          <p class="eyebrow">AI Performance Analysis</p>
+          <h3>تحليل الأستاذ الذكي</h3>
+          <p data-ai-analysis>أداؤك جيد، لكن تحتاج مراجعة العلاقة بين المشتقة وميل المماس.</p>
+        </section>
+        <section class="analysis-card">
+          <p class="eyebrow">Recommendations</p>
+          <h3>توصيات المراجعة</h3>
+          <ul>
+            <li>راجع درس التفسير الهندسي للمشتقة.</li>
+            <li>حل 6 تمارين إضافية حول f'(a).</li>
+            <li>أعد الاختبار بعد 24 ساعة لتثبيت الفكرة.</li>
+          </ul>
+        </section>
+        <section class="analysis-card">
+          <p class="eyebrow">Next Step</p>
+          <h3>الخطوة التالية</h3>
+          <p>انتقل إلى درس قواعد الاشتقاق عندما تحصل على 80% أو أكثر.</p>
+          <div class="result-actions">
+            <button class="button primary" type="button" data-retry>إعادة الاختبار</button>
+            <button class="button soft" type="button" data-go="/student/lessons/lesson-1">راجع الدرس</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" data-modal-backdrop hidden></div>
+  <section class="submit-modal glass" data-submit-modal role="dialog" aria-modal="true" aria-labelledby="submitTitle" hidden>
+    <div class="modal-head">
+      <h2 id="submitTitle">إنهاء الاختبار؟</h2>
+      <button type="button" data-close-modal aria-label="إغلاق">×</button>
+    </div>
+    <p>سيتم احتساب إجاباتك الحالية وعرض النتيجة مع تحليل AI وتوصيات المراجعة.</p>
+    <div class="modal-actions">
+      <button class="button soft" type="button" data-close-modal>العودة للأسئلة</button>
+      <button class="button primary" type="button" data-submit>عرض النتيجة</button>
+    </div>
+  </section>
+
+  <div class="toast" data-toast>تم تحديث الإجابة</div>
+  <script src="exercise-quiz.js"></script>
+  <script src="navigation.js"></script>
+</body>
+</html>
+
+
+
+
